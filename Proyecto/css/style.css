@@ -12,36 +12,69 @@ h1{
     margin: auto;
     font-size: 45px;
 }
+
 .Peli{
     color: #e96550;
 }
 .Quiz{
     color: white;
 }
-#inicio{
+.inicio {
     background: #494cbe;
     display: flex;
 }
+/*.Oculto{
+    display: none;
+}*/
+.Contenedor{
+    margin: auto;
+}
 .Botones{
-    position: absolute;
+    margin: auto;  
 }
 .Button{
     display: block;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
 }
 .Jugar{
     background-color: #e96550;
     border: none;
     border-radius: 10px;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 30px;
     cursor: pointer;
+    margin-top: 50px;
 
 }
+.Instrucciones{
+    background-color: #f5d159;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+.Créditos{
+    background-color: #35b2a0;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 #categoria{
     background: #d53e2b;
 }
