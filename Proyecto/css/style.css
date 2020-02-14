@@ -1,0 +1,32 @@
+section{
+    width:360px;
+    height:550px;
+    text-align: center;
+}
+#splash{
+    background: LightSeaGreen;
+}
+#inicio{
+    background: red;
+}
+#categoria{
+    background: pink;
+}
+#nivel{
+    background:violet;
+}
+#seleccion{
+    background:orangered;
+}
+#juego{
+    background: orange;
+}
+#final{
+    background: yellowgreen;
+}
+#instrucciones{
+    background: blue;
+}
+#creditos{
+    background: green;
+}
