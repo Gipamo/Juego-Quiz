@@ -4,13 +4,32 @@ section{
     text-align: center;
 }
 #splash{
-    background: LightSeaGreen;
+    background: #494cbe;
+    display: flex;
+}
+h1{
+    display: block;
+    margin: auto;
+    font-size: 45px;
+}
+.Peli{
+    color: #e96550;
+}
+.Quiz{
+    color: white;
 }
 #inicio{
-    background: red;
+    background: #494cbe;
+    display: flex;
+}
+.Botones{
+    position: absolute;
+    display: block;
+}
+.Button{
 }
 #categoria{
-    background: pink;
+    background: #e96550;
 }
 #nivel{
     background:violet;
