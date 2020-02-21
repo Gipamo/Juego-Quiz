@@ -1,7 +1,7 @@
 var secciones = [];
 var tiempo_splash = 2000;
 
-Window.onload = function(){
+window.onload = function(){
     inicializarReferencias();
 
 }
@@ -32,6 +32,6 @@ function cambiarSeccion(id_seccion){
     }
 
     secciones[id_seccion].classList.remove("oculto");
-    secciones[id_seccion].classList.style.display=none;
-    
+
+
 }
