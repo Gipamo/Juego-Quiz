@@ -28,10 +28,11 @@ h1{
     margin: auto;
 }
 h2{
+
     font-size: 35px;
     color: white;
-    margin-bottom: 30px;
-    margin: auto;
+    margin-bottom: 50px;
+    
 }
 
 img{
@@ -65,7 +66,7 @@ img{
 .button{
     width: 250px;
     margin-top: 10px;
-    border-radius: 20px;
+    border-radius: 50px;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
