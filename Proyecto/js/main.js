@@ -1,5 +1,5 @@
 var secciones = [];
-var tiempo_splash = 2000;
+var tiempo_splash = 2500;
 
 window.onload = function(){
     inicializarReferencias();
