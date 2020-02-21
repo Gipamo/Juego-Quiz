@@ -3,39 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
     <title>Juego</title>
 </head>
 <body>
-    <section id="splash">
+    <section id="splash" class="splash Oculto">
         <H1><span class="Peli">PELI </span><span class="Quiz">QUIZ</span></H1>
     </section>
     <br>
-    <section class="inicio Oculto">
+    <section id="inicio" class="inicio Oculto">
         <div class="Contenedor">
             <H1><span class="Peli">PELI </span><span class="Quiz">QUIZ</span></H1>
-            <div class="Botones">
-                <button class="Button Jugar">Jugar</button>
-                <button class="Button Instrucciones">Instrucciones</button>
-                <button class="Button Créditos">Créditos</button>
+            <div id="Botones">
+                <button class="Button Jugar" onclick="cambiarSeccion(2)" href="javascript:void()">Jugar</button>
+                <button class="Button Instrucciones" onclick="cambiarSeccion(7)" href="javascript:void()">Instrucciones</button>
+                <button class="Button Créditos" onclick="cambiarSeccion(8)" href="javascript:void()">Créditos</button>
             </div>
         </div>
     </section>
     <br>
-    <section id="categoria">
+    <section id="categoria" class="categoria Oculto">
+        <div class="Contenedor">
+            <div id="Botones">
+                <button class="Button" onclick="cambiarSeccion(3)">Prueba</button>
+            </div>
+        </div>
     </section>
     <br>
-    <section id="nivel">
+    <section id="nivel" class="nivel Oculto">
+        <div class="Contenedor">
+            <div id="Botones">
+                <button class="Button" onclick="cambiarSeccion(4)">Prueba</button>
+            </div>
+        </div>
     </section>
-    <section id="seleccion">
+    <section id="seleccion" class="seleccion Oculto">
+        <div class="Contenedor">
+            <div id="Botones">
+                <button class="Button" onclick="cambiarSeccion(5)">Prueba</button>
+            </div>
+        </div>
     </section>
-    <section id="juego">
+    <section id="juego" class="juego Oculto">
+        <div class="Contenedor">
+            <div id="Botones">
+                <button class="Button" onclick="cambiarSeccion(6)">Prueba</button>
+            </div>
+        </div>
     </section>
-    <section id="final">
+    <section id="final" class="final Oculto">
+        <div class="Contenedor">
+            <div id="Botones">
+                <button class="Button" onclick="cambiarSeccion(1)">Prueba</button>
+            </div>
+        </div>
     </section>
-    <section id="instrucciones">
+    <section id="instrucciones" class="instrucciones Oculto">
+        <div class="Contenedor">
+            <div id="Botones">
+                <button class="Button" onclick="cambiarSeccion(1)" >Prueba</button>
+            </div>
+        </div>
     </section>
-    <section id="creditos">
+    <section id="creditos" class="creditos Oculto">
+        <div class="Contenedor">
+            <div id="Botones">
+                <button class="Button" onclick="cambiarSeccion(1)">Prueba</button>
+            </div>
+        </div>
     </section>
 </body>
 </html>
