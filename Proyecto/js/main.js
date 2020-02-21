@@ -3,6 +3,8 @@ var tiempo_splash = 2000;
 
 window.onload = function(){
     inicializarReferencias();
+    setTimeout(cambiarSplash,tiempo_splash);
+
 
 }
 
@@ -15,13 +17,14 @@ function inicializarReferencias(){
     secciones[6] = document.getElementById("final");
     secciones[7] = document.getElementById("instrucciones");
     secciones[8] = document.getElementById("creditos");
+    secciones[9] = document.getElementById("splash");
 
 }
 
-/*function cambiarSplash(){
-    secciones[1].className = "splash oculto";
-    secciones[2].className = "home";
-}*/
+function cambiarSplash(){
+    secciones[9].className = "splash oculto";
+    secciones[1].className = "inicio flex";
+}
 
 //https://developer.mozilla.org/es/docs/Web/API/Element/classList
 //https://www.youtube.com/watch?v=2z0wMNHPbzk
