@@ -1,96 +1,103 @@
 <!DOCTYPE html>
-<html lang="ed">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="js/main.js"></script>
-    
     <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
     <title>Juego</title>
 </head>
 <body>
-    <section id="splash" class="splash Oculto">
+    <section id="splash" class="splash flex animated heartBeat ifinite">
         <H1><span class="Peli">PELI </span><span class="Quiz">QUIZ</span></H1>
     </section>
     <br>
-    <section id="inicio" class="inicio Oculto">
-        <div class="Contenedor">
-            <H1><span class="Peli">PELI </span><span class="Quiz">QUIZ</span></H1>
-            <div id="Botones">
-                <button class="Button Btn_Jugar" onclick="cambiarSeccion(2)" href="javascript:void()">Jugar</button>
-                <button class="Button Btn_Instrucciones" onclick="cambiarSeccion(7)" href="javascript:void()">Instrucciones</button>
-                <button class="Button Btn_Créditos" onclick="cambiarSeccion(8)" href="javascript:void()">Créditos</button>
+    <section id="inicio" class="inicio oculto">
+        <div class="contenedor">
+            <H1><span class="peli">PELI </span><span class="quiz">QUIZ</span></H1>
+            <div id="botones">
+                <button class="button btn_Jugar" onclick="cambiarSeccion(2)" href="javascript:void()">Jugar</button>
+                <button class="button btn_Instrucciones" onclick="cambiarSeccion(7)" href="javascript:void()">Instrucciones</button>
+                <button class="button btn_Créditos" onclick="cambiarSeccion(8)" href="javascript:void()">Créditos</button>
             </div>
         </div>
     </section>
     <br>
-    <section id="categoria" class="categoria Oculto">
-        <div class="Contenedor">
+    <section id="categoria" class="categoria oculto">
+        <img src="img/arrow-alt-circle-left-regular.png" alt=""onclick="cambiarSeccion(1)">
+        <div class="contenedor">
             <h2>¿Con que quieres jugar?</h2>
-            <div id="Botones">
-                <button class="Button Btn_Peliculas" onclick="cambiarSeccion(2)" href="javascript:void()">Peliculas</button>
-                <button class="Button Btn_Series" onclick="cambiarSeccion(7)" href="javascript:void()">Series</button>
+            <div id="botones">
+                <button class="button btn_Peliculas" onclick="cambiarSeccion(3)" href="javascript:void()">Peliculas</button>
+                <button class="button btn_Series" onclick="cambiarSeccion(3)" href="javascript:void()">Series</button>
             </div>
         </div>
     </section>
     <br>
-    <section id="nivel" class="nivel Oculto">
-        <div class="Contenedor">
-            <div id="Botones">
-                <button class="Button Btn_Niveles" onclick="cambiarSeccion(2)" href="javascript:void()">Facil</button>
-                <button class="Button Btn_Niveles" onclick="cambiarSeccion(7)" href="javascript:void()">Medio</button>
-                <button class="Button Btn_Niveles" onclick="cambiarSeccion(2)" href="javascript:void()">Dificil</button>
+    <section id="nivel" class="nivel oculto">
+        <button class="button btn_Niveles" onclick="cambiarSeccion(4)" href="javascript:void()"><img src="img/arrow-alt-circle-left-regular.png" alt=""></button>
+        <div class="contenedor">
+            <div id="botones">
+                <button class="button btn_Niveles" onclick="cambiarSeccion(4)" href="javascript:void()">Facil</button>
+                <button class="button btn_Niveles" onclick="cambiarSeccion(4)" href="javascript:void()">Medio</button>
+                <button class="button btn_Niveles" onclick="cambiarSeccion(4)" href="javascript:void()">Dificil</button>
             </div>
         </div>
     </section>
     <br>
-    <section id="seleccion" class="seleccion Oculto">
-        <div class="Contenedor">
-            <div id="Botones">
-                <button class="Button Btn_Selec" onclick="cambiarSeccion(7)" href="javascript:void()">Peli 1</button>
-                <button class="Button Btn_Selec" onclick="cambiarSeccion(2)" href="javascript:void()">Peli 2</button>
-                <button class="Button Btn_Selec" onclick="cambiarSeccion(7)" href="javascript:void()">Peli 3</button>
-                <button class="Button Btn_Selec" onclick="cambiarSeccion(7)" href="javascript:void()">Peli 4</button>
-                <button class="Button Btn_Selec" onclick="cambiarSeccion(2)" href="javascript:void()">Peli 5</button>
-                <button class="Button Btn_Selec" onclick="cambiarSeccion(7)" href="javascript:void()">Peli 6</button>
+    <section id="seleccion" class="seleccion oculto">
+        <img src="img/arrow-alt-circle-left-regular.png" alt="">
+        <div class="contenedor">
+            <div id="botones">
+                <button class="button btn_Selec" onclick="cambiarSeccion(7)" href="javascript:void()">Peli 1</button>
+                <button class="button btn_Selec" onclick="cambiarSeccion(2)" href="javascript:void()">Peli 2</button>
+                <button class="button btn_Selec" onclick="cambiarSeccion(7)" href="javascript:void()">Peli 3</button>
+                <button class="button btn_Selec" onclick="cambiarSeccion(7)" href="javascript:void()">Peli 4</button>
+                <button class="button btn_Selec" onclick="cambiarSeccion(2)" href="javascript:void()">Peli 5</button>
+                <button class="button btn_Selec" onclick="cambiarSeccion(7)" href="javascript:void()">Peli 6</button>
             </div>
         </div>
     </section>
     <br>
-    <section id="juego" class="juego Oculto">
-        <div class="Contenedor">
-            <div class="PistaImg"></div>
-            <div class="Letras">
-                <div class="Cuadrados"></div>
-                <div class="Cuadrados"></div>
-                <div class="Cuadrados"></div>
-                <div class="Cuadrados"></div>
-                <div class="Cuadrados"></div>
+    <section id="juego" class="juego oculto">
+        <img src="img/arrow-alt-circle-left-regular.png" alt="">
+        <div class="contenedor">
+            <div class="pistaImg"></div>
+            <div class="letras">
+                <div class="cuadrados"></div>
+                <div class="cuadrados"></div>
+                <div class="cuadrados"></div>
+                <div class="cuadrados"></div>
+                <div class="cuadrados"></div>
             </div>
             
         </div>
     </section>
     <br>
-    <section id="final" class="final Oculto">
-        <div class="Contenedor">
-            <div id="Botones">
-                <button class="Button" onclick="cambiarSeccion(1)">Prueba</button>
+    <section id="final" class="final oculto">
+        <img src="img/arrow-alt-circle-left-regular.png" alt="">
+        <div class="contenedor">
+            <div id="botones">
+                <button class="button" onclick="cambiarSeccion(1)">Prueba</button>
             </div>
         </div>
     </section>
     <br>
-    <section id="instrucciones" class="instrucciones Oculto">
-        <div class="Contenedor">
-            <div id="Botones">
-                <button class="Button" onclick="cambiarSeccion(1)" >Prueba</button>
+    <section id="instrucciones" class="instrucciones oculto">
+        <img src="img/arrow-alt-circle-left-regular.png" alt="">
+        <div class="contenedor">
+            <div id="botones">
+                <button class="button" onclick="cambiarSeccion(1)" >Prueba</button>
             </div>
         </div>
     </section>
     <br>
-    <section id="creditos" class="creditos Oculto">
-        <div class="Contenedor">
-            <div id="Botones">
-                <button class="Button" onclick="cambiarSeccion(1)">Prueba</button>
+    <section id="creditos" class="creditos oculto">
+        <img src="img/arrow-alt-circle-left-regular.png" alt="">
+        <div class="contenedor">
+            <div id="botones">
+                <button class="button" onclick="cambiarSeccion(1)">Prueba</button>
             </div>
         </div>
     </section>
