@@ -18,10 +18,10 @@ function inicializarReferencias(){
 
 }
 
-/*function cambiarSplash(){
+function cambiarSplash(){
     secciones[1].className = "splash oculto";
     secciones[2].className = "home";
-}*/
+}
 
 //https://developer.mozilla.org/es/docs/Web/API/Element/classList
 //https://www.youtube.com/watch?v=2z0wMNHPbzk
