@@ -21,7 +21,7 @@ h2{
     margin: auto;
     font-size: 35px;
     color: white;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .Peli{
@@ -34,6 +34,7 @@ h2{
     margin: auto;
 }
 
+
 /*---------------- Inicio --------------*/
 .inicio {
     background: #494cbe;
@@ -45,41 +46,44 @@ h2{
 
 
 /*---------------- Botones --------------*/
-.Botones{
-    margin: auto;  
-}
 .Button{
-    display: block;
     width: 250px;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
     color: white;
-    padding: 10px 32px;
-    text-align: center;
+    padding: 10px 20px;
     text-decoration: none;
     font-size: 30px;
     cursor: pointer;
+    border: solid white 2px;
 }
-
-.Jugar{
+.Btn_Niveles{
+    color: black;
+    
+}
+.Btn_Jugar{
     background-color: #e96550;
-    border: none;
     margin-top: 50px;
 }
-.Instrucciones{
+.Btn_Instrucciones{
     background-color: #f5d159;
-    border: none;
 }
-.Créditos{
+.Btn_Créditos{
     background-color: #35b2a0;
-    border: none;
 }
 
-.Peliculas,.Series{
-    border: solid #e96550 5px;
+.Btn_Peliculas,.Btn_Series{
+    border: solid #c03924 5px;
     color: black;
+}
+.Btn_Selec{
+    color: black;
+    border-radius: 0%;
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 
@@ -100,17 +104,37 @@ h2{
 
 #nivel{
     background:violet;
+    display:flex;
 }
 
 
 /*---------------- Seleccion --------------*/
 #seleccion{
     background:orangered;
+    display:flex;
 }
 
 /*---------------- Juego --------------*/
 #juego{
     background: orange;
+    display: flex;
+}
+.PistaImg{
+    width: 250px;
+    height: 250px;
+    background-color: tomato;
+    margin: auto;
+}
+.Letras{
+    margin-top: 30px;
+    display: flex;
+}
+
+.Cuadrados{
+    width: 50px;
+    height: 50px;
+    margin: 0px 5px;
+    background-color: thistle;
 }
 
 
