@@ -26,12 +26,15 @@ function inicializarReferencias(){
 //https://developer.mozilla.org/es/docs/Web/API/Element/classList
 //https://www.youtube.com/watch?v=2z0wMNHPbzk
 function cambiarSeccion(id_seccion){
+    if(id_seccion){
 
-    for (var i in secciones) {
-        secciones[i].classList.add("oculto");
+        for (var i in secciones) {
+            secciones[i].classList.remove("flex");
+            secciones[i].classList.add("oculto");
+        }
+    
+        secciones[id_seccion].classList.remove("oculto");
+        secciones[id_seccion].classList.add("flex");
     }
-
-    secciones[id_seccion].classList.remove("oculto");
-
-
+    
 }
