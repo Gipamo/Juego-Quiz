@@ -32,4 +32,6 @@ function cambiarSeccion(id_seccion){
     }
 
     secciones[id_seccion].classList.remove("oculto");
+    secciones[id_seccion].classList.style.display=none;
+    
 }
