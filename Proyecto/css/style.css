@@ -5,9 +5,15 @@ section{
     height:550px;
     text-align: center;
 }
-#splash{
-    background: #494cbe;
+.flex{
     display: flex;
+}
+.oculto{
+    display: none;
+}
+.splash{
+    background: #494cbe;
+    
 }
 
 h1{
@@ -24,13 +30,19 @@ h2{
     margin-bottom: 30px;
 }
 
-.Peli{
+img{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    position: absolute;
+}
+.peli{
     color: #e96550;
 }
-.Quiz{
+.quiz{
     color: white;
 }
-.Contenedor{
+.contenedor{
     margin: auto;
 }
 
@@ -38,15 +50,13 @@ h2{
 /*---------------- Inicio --------------*/
 .inicio {
     background: #494cbe;
-    display: flex;
+    
 }
-.oculto{
-    display: none;
-}
+
 
 
 /*---------------- Botones --------------*/
-.Button{
+.button{
     width: 250px;
     margin-top: 10px;
     border-radius: 20px;
@@ -57,26 +67,26 @@ h2{
     cursor: pointer;
     border: solid white 2px;
 }
-.Btn_Niveles{
+.btn_Niveles{
     color: black;
     
 }
-.Btn_Jugar{
+.btn_Jugar{
     background-color: #e96550;
     margin-top: 50px;
 }
-.Btn_Instrucciones{
+.btn_Instrucciones{
     background-color: #f5d159;
 }
-.Btn_Créditos{
+.btn_Créditos{
     background-color: #35b2a0;
 }
 
-.Btn_Peliculas,.Btn_Series{
+.btn_Peliculas,.btn_Series{
     border: solid #c03924 5px;
     color: black;
 }
-.Btn_Selec{
+.btn_Selec{
     color: black;
     border-radius: 0%;
     width: 120px;
@@ -96,41 +106,41 @@ h2{
 
 .categoria{
     background: #d53e2b;
-    display: flex;
+    
 }
 
 
 /*---------------- Nivel --------------*/
 
-#nivel{
+.nivel{
     background:violet;
-    display:flex;
+    
 }
 
 
 /*---------------- Seleccion --------------*/
-#seleccion{
+.seleccion{
     background:orangered;
-    display:flex;
+
 }
 
 /*---------------- Juego --------------*/
-#juego{
+.juego{
     background: orange;
-    display: flex;
+    
 }
-.PistaImg{
+.pistaImg{
     width: 250px;
     height: 250px;
     background-color: tomato;
     margin: auto;
 }
-.Letras{
+.letras{
     margin-top: 30px;
-    display: flex;
+    
 }
 
-.Cuadrados{
+.cuadrados{
     width: 50px;
     height: 50px;
     margin: 0px 5px;
@@ -140,16 +150,16 @@ h2{
 
 
 /*---------------- Final --------------*/
-#final{
+.final{
     background: yellowgreen;
 }
 
 /*---------------- Instrucciones --------------*/
-#instrucciones{
+.instrucciones{
     background: blue;
 }
 
 /*---------------- Creditos --------------*/
-#creditos{
+.creditos{
     background: green;
 }
