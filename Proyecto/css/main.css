@@ -1,0 +1,176 @@
+/*---------------- General --------------*/
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+section {
+    width: 360px;
+    height: 590px;
+    text-align: center;
+    
+}
+.flex{
+    display: flex;
+}
+.oculto{
+    display: none;
+}
+.splash{
+    background: #494cbe;
+    
+}
+h1{
+    font-size: 45px;
+    color: white;
+    margin: auto;
+    
+}
+.H1Splash{
+    background-color: #35b2a0;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+h2{
+
+    font-size: 35px;
+    color: white;
+    margin-bottom: 50px;
+    
+}
+
+img{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.peli{
+    color: #e96550;
+}
+.quiz{
+    color: white;
+}
+.contenedor{
+    margin: auto;
+}
+
+
+/*---------------- Inicio --------------*/
+.inicio {
+    background: #494cbe;
+    
+}
+
+
+
+/*---------------- Botones --------------*/
+.button{
+    width: 250px;
+    margin-top: 10px;
+    border-radius: 50px;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 30px;
+    cursor: pointer;
+    border: solid white 2px;
+}
+.btn_Niveles{
+    color: black;
+    
+}
+.btn_Jugar{
+    background-color: #e96550;
+    margin-top: 50px;
+}
+.btn_Instrucciones{
+    background-color: #f5d159;
+}
+.btn_Créditos{
+    background-color: #35b2a0;
+}
+
+.btn_Peliculas,.btn_Series{
+    border: solid #c03924 5px;
+    color: black;
+}
+.btn_Selec{
+    color: black;
+    border-radius: 0%;
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+/*---------------- Categoria --------------*/
+
+.categoria{
+    background: #d53e2b;
+    
+}
+
+
+/*---------------- Nivel --------------*/
+
+.nivel{
+    background:violet;
+}
+
+
+/*---------------- Seleccion --------------*/
+.seleccion{
+    background:orangered;
+
+}
+
+/*---------------- Juego --------------*/
+.juego{
+    background: orange;
+    
+}
+.pistaImg{
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+    margin: auto;
+}
+.letras{
+    margin-top: 30px;
+    
+}
+
+.cuadrados{
+    width: 50px;
+    height: 50px;
+    margin: 0px 5px;
+    display: inline-block;
+    background-color: thistle;
+}
+
+
+
+/*---------------- Final --------------*/
+.final{
+    background: yellowgreen;
+}
+
+/*---------------- Instrucciones --------------*/
+.instrucciones{
+    background: blue;
+}
+
+/*---------------- Creditos --------------*/
+.creditos{
+    background: green;
+}
