@@ -14,10 +14,10 @@
     <section id="splash" class="splash flex animated heartBeat ifinite">
         <div class="ContenedorSplash">
             <div class="peliSplash">
-                <div class="p"><span>P</span></div>
-                <div class="e"><span>E</span></div>
-                <div class="l"><span>L</span></div>
-                <div class="i"><span>I</span></div>
+                <div class="Cuadro"><span id="p">P</span></div>
+                <div class="Cuadro"><span id="e">E</span></div>
+                <div class="Cuadro"><span id="l">L</span></div>
+                <div class="Cuadro"><span id="i">I</span></div>
                 
             </div>
             <div class="quizSplash">QUIZ</div>
@@ -37,7 +37,7 @@
         </div>
     </section>
     <section id="categoria" class="categoria oculto">
-        <img src="img/arrow-alt-circle-left-regular.png" alt="" onclick="cambiarSeccion(1)">
+        <img  class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(1)">
         <div class="contenedor">
             <h2>¿Con que quieres jugar?</h2>
             <div id="botones">
@@ -48,7 +48,7 @@
         </div>
     </section>
     <section id="nivel" class="nivel oculto">
-        <img src="img/arrow-alt-circle-left-regular.png" alt="" onclick="cambiarSeccion(2)">
+        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(2)">
         <div class="contenedor">
             <div id="botones">
                 <button class="button btn_Niveles" onclick="cambiarSeccion(4)" href="javascript:void()">Facil</button>
@@ -58,7 +58,7 @@
         </div>
     </section>
     <section id="seleccion" class="seleccion oculto">
-        <img src="img/arrow-alt-circle-left-regular.png" alt="" onclick="cambiarSeccion(3)">
+        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(3)">
         <div class="contenedor">
             <div id="botones">
                 <button class="button btn_Selec" onclick="cambiarSeccion(5)" href="javascript:void()">Peli 1</button>
@@ -71,7 +71,7 @@
         </div>
     </section>
     <section id="juego" class="juego oculto">
-        <img src="img/arrow-alt-circle-left-regular.png" alt="" onclick="cambiarSeccion(4)">
+        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(4)">
         <div class="contenedor">
             <div class="pistaImg"></div>
             <div class="letras">
@@ -87,7 +87,7 @@
         </div>
     </section>
     <section id="final" class="final oculto">
-        <img src="img/arrow-alt-circle-left-regular.png" alt="" onclick="cambiarSeccion(5)">
+        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(5)">
         <div class="contenedor">
             <div class="pistaImg">
                 <h2>Usted ha ganado</h2>
@@ -98,7 +98,7 @@
         </div>
     </section>
     <section id="instrucciones" class="instrucciones oculto">
-        <img src="img/arrow-alt-circle-left-regular.png" alt="" onclick="cambiarSeccion(1)">
+        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(1)">
         <div class="contenedor">
             <div id="botones">
                 <button class="button btn_Niveles" onclick="cambiarSeccion(1)">Prueba</button>
@@ -106,12 +106,20 @@
         </div>
     </section>
     <section id="creditos" class="creditos oculto">
-        <img src="img/arrow-alt-circle-left-regular.png" alt="" onclick="cambiarSeccion(1)">
+        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(1)">
         <div class="contenedor">
-            
-            <div id="botones">
-                <button class="button btn_Niveles" onclick="cambiarSeccion(1)">Volver</button>
+            <div class="Imagen">
+                <img src="img/neider.png" alt="" class="Nosotros">
             </div>
+            <span class="SpanCreditos">Neider Carrillo: Desarrollador</span>
+            <div class="Imagen">
+                <img src="img/mariajose.png" alt="" class="Nosotros">
+            </div>
+            <span class="SpanCreditos">Maria Jose: Diseñadora</span>
+            <div class="Imagen">
+                <img src="img/giam.png" alt="" class="Nosotros">
+            </div>
+            <span class="SpanCreditos">Gian Paul: Desarrollador</span>
         </div>
     </section>
 </body>
