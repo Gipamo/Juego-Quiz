@@ -47,14 +47,30 @@ img{
     left: 0;
     top: 0;
 }
-.peli{
-    color: #e96550;
+.peliSplash, .quizSplash{
+    display: flex;
+    color: white;
+    margin: auto;
+
 }
-.quiz{
+.quiz,.peli{
     color: white;
 }
-.contenedor{
+.contenedor,.ContenedorSplash{
     margin: auto;
+    font-size: 30px;
+    padding: 5px 5px;
+}
+.quiz{
+    height: 35px;
+    width: 38px;
+}
+
+.p,.e,.l,.i{
+    height: 35px;
+    width: 38px;
+    background-color: #35b2a0;
+    margin: 1px;
 }
 
 
