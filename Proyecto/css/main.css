@@ -48,22 +48,24 @@ img{
     top: 0;
 }
 .peliSplash, .quizSplash{
-    display: flex;
     color: white;
-    margin: auto;
+    display: flex;
 
 }
 .quiz,.peli{
     color: white;
+}
+.ContenedorSplash{
+    display: flex;
 }
 .contenedor,.ContenedorSplash{
     margin: auto;
     font-size: 30px;
     padding: 5px 5px;
 }
-.quiz{
-    height: 35px;
-    width: 38px;
+.quizSplash{
+    height: 37px;
+    width: 80px;
 }
 
 .p,.e,.l,.i{
