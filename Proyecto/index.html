@@ -41,9 +41,8 @@
         <div class="contenedor">
             <h2>¿Con que quieres jugar?</h2>
             <div id="botones">
-                <button class="button btn_Peliculas" onclick="cambiarSeccion(3)"
-                    href="javascript:void()">Peliculas</button>
-                <button class="button btn_Series" onclick="cambiarSeccion(3)" href="javascript:void()">Series</button>
+                <button class="button btn_Peliculas" onclick="tipoJuego(0);cambiarSeccion(3)"href="javascript:void()">Peliculas</button>
+                <button class="button btn_Series" onclick="tipoJuego(1);cambiarSeccion(3)" href="javascript:void()">Series</button>
             </div>
         </div>
     </section>
@@ -51,9 +50,9 @@
         <img class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(2)">
         <div class="contenedor">
             <div id="botones">
-                <button class="button btn_Niveles" onclick="cambiarSeccion(4)" href="javascript:void()">Facil</button>
-                <button class="button btn_Niveles" onclick="cambiarSeccion(4)" href="javascript:void()">Medio</button>
-                <button class="button btn_Niveles" onclick="cambiarSeccion(4)" href="javascript:void()">Dificil</button>
+                <button class="button btn_Niveles" onclick="cambioDificultad(0);cambiarSeccion(4) " href="javascript:void()">Facil</button>
+                <button class="button btn_Niveles" onclick="cambioDificultad(1);cambiarSeccion(4)" href="javascript:void()">Medio</button>
+                <button class="button btn_Niveles" onclick="cambioDificultad(2);cambiarSeccion(4)" href="javascript:void()">Dificil</button>
             </div>
         </div>
     </section>
@@ -61,11 +60,11 @@
         <img class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(3)">
         <div class="contenedor">
             <div id="botones">
-                <button class="button btn_Selec" onclick="cambiarSeccion(5)" href="javascript:void()">Peli 1</button>
-                <button class="button btn_Selec" onclick="cambiarSeccion(5)" href="javascript:void()">Peli 2</button>
-                <button class="button btn_Selec" onclick="cambiarSeccion(5)" href="javascript:void()">Peli 3</button>
-                <button class="button btn_Selec" onclick="cambiarSeccion(5)" href="javascript:void()">Peli 4</button>
-                <button class="button btn_Selec" onclick="cambiarSeccion(5)" href="javascript:void()">Peli 5</button>
+                <button class="button btn_Selec" onclick="cambioNivel(1);cambiarSeccion(5)" href="javascript:void()">Peli 1</button>
+                <button class="button btn_Selec" onclick="cambioNivel(2);cambiarSeccion(5)" href="javascript:void()">Peli 2</button>
+                <button class="button btn_Selec" onclick="cambioNivel(3);cambiarSeccion(5)" href="javascript:void()">Peli 3</button>
+                <button class="button btn_Selec" onclick="cambioNivel(4);cambiarSeccion(5)" href="javascript:void()">Peli 4</button>
+                <button class="button btn_Selec" onclick="cambioNivel(5);cambiarSeccion(5)" href="javascript:void()">Peli 5</button>
                 <button class="button btn_Selec" onclick="cambiarSeccion(5)" href="javascript:void()">Peli 6</button>
             </div>
         </div>
