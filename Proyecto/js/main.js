@@ -20,75 +20,25 @@ function inicializarReferencias(){
     secciones[2] = document.getElementById("categoria");
     secciones[3] = document.getElementById("nivel");
     secciones[4] = document.getElementById("seleccion");
-    secciones[5] = contenedor = document.getElementById("juego");
+    secciones[5] = document.getElementById("juego");
     secciones[6] = document.getElementById("final");
     secciones[7] = document.getElementById("instrucciones");
     secciones[8] = document.getElementById("creditos");
     secciones[9] = document.getElementById("splash");
 
+    contenedor=document.getElementById("pistaImg");
+
 }
 
 // Declaracion de imagenes
 
-imagenes[1] = [
-    {id:"imagen",src:"img/peliculas/facil/aladdin.JPG"},
-  ];
+imagenes[1] ="img/peliculas/facil/aladdin.jpg";
+imagenes[1] ="img/peliculas/facil/aladdin.jpg";
+imagenes[1] ="img/peliculas/facil/aladdin.jpg";
+imagenes[1] ="img/peliculas/facil/aladdin.jpg";
+imagenes[1] ="img/peliculas/facil/aladdin.jpg";
 
-imagenes[2] = [
-    {id:"imagen",src:"img/peliculas/facil/comoentrenaratudragon.JPG"},
-  ];
-  
-imagenes[3] = [
-    {id:"imagen",src:"img/peliculas/facil/jurassicpark.JPG"},
-  ];
-  
-imagenes[4] = [
-    {id:"imagen",src:"img/peliculas/facil/monstersinc.JPG"},
-  ];
-  
-imagenes[5] = [
-    {id:"imagen",src:"img/peliculas/facil/ratatouille.JPG"},
-  ];
-  
-imagenes[6] = [
-    {id:"imagen",src:"img/peliculas/normal/aliciaenelpaisdelasmaravillas.JPG"},
-  ];
-  
-imagenes[7] = [
-    {id:"imagen",src:"img/peliculas/normal/kingkong.JPG"},
-  ];
-  
-imagenes[8] = [
-    {id:"imagen",src:"img/peliculas/normal/mobydick.JPG"},
-  ];
-  
-imagenes[9] = [
-    {id:"imagen",src:"img/peliculas/normal/viernes13.JPG"},
-  ];
-  
-imagenes[10] = [
-    {id:"imagen",src:"img/peliculas/normal/volveralfuturo.JPG"},
-  ];
 
-imagenes[11] = [
-    {id:"imagen",src:"img/peliculas/dificil/cazafantasmas.JPG"},
-  ];
-
-imagenes[12] = [
-    {id:"imagen",src:"img/peliculas/dificil/psicosis.PNG"},
-  ];
-
-imagenes[13] = [
-    {id:"imagen",src:"img/peliculas/dificil/pulpfiction.JPG"},
-  ];
-
-imagenes[14] = [
-    {id:"imagen",src:"img/peliculas/dificil/sexandthecity.JPG"},
-  ];
-
-imagenes[15] = [
-    {id:"imagen",src:"img/peliculas/dificil/taxidriver.JPG"},
-  ];
 
 
 
@@ -121,15 +71,9 @@ function cambioDificultad(dificultad){
 
 function cambioNivel(id){
     nivel=gtipo+gdificultad+id;
-    var nivelActual=imagenes[nivel];
-    var salida = "";
-    contenedor.innerHTML = "";
-    for(var i=0;i<nivel.length;i++){
-      
-     salida += '<img src="'+nivelActual[i].src+'"id="'+nivelActual[i].id+'"></img>';
-
-    }
-    contenedor.innerHTML = salida;
+    var nivelActual=imagenes[nivel]; 
+    salida = '<img  id ="imgNivel" src="'+nivelActual+'"></img>';
+    contenedor.innerHTML=salida;
 }
 
  
