@@ -121,8 +121,18 @@ function cambioDificultad(dificultad){
 
 function cambioNivel(id){
     nivel=gtipo+gdificultad+id;
+    var nivelActual=imagenes[nivel];
+    var salida = "";
+    contenedor.innerHTML = "";
+    for(var i=0;i<nivel.length;i++){
+      
+     salida += '<img src="'+nivelActual[i].src+'"id="'+nivelActual[i].id+'"></img>';
 
+    }
+    contenedor.innerHTML = salida;
 }
+
+ 
 
 //pantalla splash
 
