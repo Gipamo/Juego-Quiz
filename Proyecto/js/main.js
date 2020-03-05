@@ -33,14 +33,20 @@ function inicializarReferencias(){
 // Declaracion de imagenes
 
 imagenes[1] ="img/peliculas/facil/aladdin.jpg";
-imagenes[1] ="img/peliculas/facil/aladdin.jpg";
-imagenes[1] ="img/peliculas/facil/aladdin.jpg";
-imagenes[1] ="img/peliculas/facil/aladdin.jpg";
-imagenes[1] ="img/peliculas/facil/aladdin.jpg";
-
-
-
-
+imagenes[2] ="img/peliculas/facil/comoentrenaratudragon.jpg";
+imagenes[3] ="img/peliculas/facil/jurassicpark.jpg";
+imagenes[4] ="img/peliculas/facil/monstersinc.jpg";
+imagenes[5] ="img/peliculas/facil/ratatouille.jpg";
+imagenes[6] ="img/peliculas/normal/aliciaenelpaisdelasmaravillas.jpg";
+imagenes[7] ="img/peliculas/normal/kingkong.jpg";
+imagenes[8] ="img/peliculas/normal/mobydick.jpg";
+imagenes[9] ="img/peliculas/normal/viernes13.jpg";
+imagenes[10] ="img/peliculas/normal/volveralfuturo.jpg";
+imagenes[11] ="img/peliculas/dificil/cazafantasmas.jpg";
+imagenes[12] ="img/peliculas/dificil/psicosis.png";
+imagenes[13] ="img/peliculas/dificil/pulpfiction.jpg";
+imagenes[14] ="img/peliculas/dificil/sexandthecity.jpg";
+imagenes[15] ="img/peliculas/dificil/taxidriver.jpg";
 
   //Seleccion de tipo de juego
 function tipoJuego(tipo){
@@ -72,7 +78,8 @@ function cambioDificultad(dificultad){
 function cambioNivel(id){
     nivel=gtipo+gdificultad+id;
     var nivelActual=imagenes[nivel]; 
-    salida = '<img  id ="imgNivel" src="'+nivelActual+'"></img>';
+    var estilos ="style= 'width:200px; height:200px;'"
+    salida = '<img  id ="imgNivel" src="'+nivelActual+'" '+estilos+' ></img>';
     contenedor.innerHTML=salida;
 }
 
