@@ -47,6 +47,35 @@ imagenes[12] ="img/peliculas/dificil/psicosis.png";
 imagenes[13] ="img/peliculas/dificil/pulpfiction.jpg";
 imagenes[14] ="img/peliculas/dificil/sexandthecity.jpg";
 imagenes[15] ="img/peliculas/dificil/taxidriver.jpg";
+imagenes[16] ="img/personajes/facil/batman.jpg";
+imagenes[17] ="img/personajes/facil/capitanamerica.jpg";
+imagenes[18] ="img/personajes/facil/deadpool.jpg";
+imagenes[19] ="img/personajes/facil/ironman.jpg";
+imagenes[20] ="img/personajes/facil/spiderman.jpg";
+imagenes[21] ="img/personajes/normal/blancanieves.jpg";
+imagenes[22] ="img/personajes/normal/rocky.jpg";
+imagenes[23] ="img/personajes/normal/shrek.jpg";
+imagenes[24] ="img/personajes/normal/sherlockholmes.jpg";
+imagenes[25] ="img/personajes/normal/venom.jpg";
+imagenes[26] ="img/personajes/dificil/amelie.jpg";
+imagenes[27] ="img/personajes/dificil/brillantina.jpg";
+imagenes[28] ="img/personajes/dificil/dumbo.jpg";
+imagenes[29] ="img/personajes/dificil/elreyleon.jpg";
+imagenes[30] ="img/personajes/dificil/harrypotter.jpg";
+
+// Declaracion de victoria
+
+nombre[1]="ALADDIN";
+nombre[2]="COMOENTRENARATUDRAGON";
+nombre[3]="JURASSICPARK";
+nombre[4]="MONSTERSINC";
+nombre[5]="RATATOUILLE";
+nombre[6]="ALICIAENELPAISDELASMARAVILLAS";
+nombre[7]="KINGKONG";
+nombre[8]="MOBYDICK";
+nombre[9]="VIERNES13";
+nombre[10]="VOLVERALFUTURO";
+
 
   //Seleccion de tipo de juego
 function tipoJuego(tipo){
