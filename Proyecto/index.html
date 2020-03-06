@@ -49,6 +49,7 @@
     <section id="nivel" class="nivel oculto">
         <img class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(2)">
         <div class="contenedor">
+            <h2>Dificultad</h2>
             <div id="botones">
                 <button class="button btn_Niveles" onclick="cambioDificultad(0);cambiarSeccion(4) " href="javascript:void()">Facil</button>
                 <button class="button btn_Niveles" onclick="cambioDificultad(1);cambiarSeccion(4)" href="javascript:void()">Medio</button>
@@ -59,28 +60,35 @@
     <section id="seleccion" class="seleccion oculto">
         <img class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(3)">
         <div class="contenedor">
-            <div id="botones">
-                <button class="button btn_Selec" onclick="cambioNivel(1);cambiarSeccion(5)" href="javascript:void()">Peli 1</button>
-                <button class="button btn_Selec" onclick="cambioNivel(2);cambiarSeccion(5)" href="javascript:void()">Peli 2</button>
-                <button class="button btn_Selec" onclick="cambioNivel(3);cambiarSeccion(5)" href="javascript:void()">Peli 3</button>
-                <button class="button btn_Selec" onclick="cambioNivel(4);cambiarSeccion(5)" href="javascript:void()">Peli 4</button>
-                <button class="button btn_Selec" onclick="cambioNivel(5);cambiarSeccion(5)" href="javascript:void()">Peli 5</button>
+            <div id="botones" class="BtnSeleccion">
+                <button class="btn_Selec" onclick="cambioNivel(1);cambiarSeccion(5)" href="javascript:void()"><img class="pistaImg" src="img/peliculas/facil/aladdin.jpg" alt=""></button>
+                <button class="btn_Selec" onclick="cambioNivel(2);cambiarSeccion(5)" href="javascript:void()"><img class="pistaImg" src="img/peliculas/facil/comoentrenaratudragon.jpg" alt=""></button>
+                <button class="btn_Selec" onclick="cambioNivel(3);cambiarSeccion(5)" href="javascript:void()"><img class="pistaImg" src="img/peliculas/facil/jurassicpark.jpg" alt=""></button>
+                <button class="btn_Selec" onclick="cambioNivel(4);cambiarSeccion(5)" href="javascript:void()"><img class="pistaImg" src="img/peliculas/facil/monstersinc.jpg" alt=""></button>
+                <button class="btn_Selec" onclick="cambioNivel(5);cambiarSeccion(5)" href="javascript:void()"><img class="pistaImg" src="img/peliculas/facil/ratatouille.jpg" alt=""></button>
             </div>
+                
         </div>
     </section>
     <section id="juego" class="juego oculto">
         <img class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(4)">
         <div class="contenedor">
             <div id="pistaImg"></div>
-            <div class="letras">
+            <div class="NomPelicula">
                 <div class="cuadrados"></div>
                 <div class="cuadrados"></div>
                 <div class="cuadrados"></div>
                 <div class="cuadrados"></div>
                 <div class="cuadrados"></div>
             </div>
-            <div id="botones">
-                <button class="button btn_Niveles" onclick="cambiarSeccion(6)">Win</button>
+            <div class="letras">
+                <div class="cuadradosLetras"></div>
+                <div class="cuadradosLetras"></div>
+                <div class="cuadradosLetras"></div>
+                <div class="cuadradosLetras"></div>
+                <div class="cuadradosLetras"></div>
+                <div class="cuadradosLetras"></div>
+                <div class="cuadradosLetras"></div>
             </div>
         </div>
     </section>
@@ -97,9 +105,24 @@
     </section>
     <section id="instrucciones" class="instrucciones oculto">
         <img class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(1)">
+        
         <div class="contenedor">
-            <div id="botones">
-                <button class="button btn_Niveles" onclick="cambiarSeccion(1)">Prueba</button>
+            <h2>Instrucciones</h2>
+            <div class="SpanInstru">
+                <span class="CuadroInstru">1</span>
+                <span class="Instru">Adivina el nombre de la película.</span>
+            </div>
+            <div class="SpanInstru">
+                <span class="CuadroInstru">2</span>
+                <span class="Instru">Selecciona las letras en orden para formar el nombre de la película.</span>
+            </div>
+            <div class="SpanInstru">
+                <span class="CuadroInstru">3</span>
+                <span class="Instru">Suma puntos que pueden ser usados en las Ayudas.</span>
+            </div>
+            <div class="SpanInstru">
+                <span class="CuadroInstru">4</span>
+                <span class="Instru">Adivina y desbloquea nuevos niveles.</span>
             </div>
         </div>
     </section>
@@ -107,17 +130,28 @@
         <img class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(1)">
         <div class="contenedor">
             <div class="Imagen">
-                <img src="img/neider.png" alt="" class="Nosotros">
-            </div>
-            <span class="SpanCreditos">Neider Carrillo: Desarrollador</span>
-            <div class="Imagen">
                 <img src="img/mariajose.png" alt="" class="Nosotros">
+                <div>
+                    <h1 class="SpanCreditos">Maria Jose Lopez</h1>
+                    <span class="SpanCreditos"> Diseñadora Grafica</span>
+                </div>
+                
             </div>
-            <span class="SpanCreditos">Maria Jose: Diseñadora</span>
+            <div class="Imagen">
+                <img src="img/neider.png" alt="" class="Nosotros">
+                <div>
+                    <h1 class="SpanCreditos">Neider Carrillo Vera</h1>
+                    <span class="SpanCreditos"> Ing. en Sistemas</span>
+                </div>
+            </div>  
             <div class="Imagen">
                 <img src="img/giam.png" alt="" class="Nosotros">
+                <div>
+                    <h1 class="SpanCreditos">Gian Paul Moreno</h1>
+                    <span class="SpanCreditos"> Ing. en Sistemas</span>
+                </div>
+                
             </div>
-            <span class="SpanCreditos">Gian Paul: Desarrollador</span>
         </div>
     </section>
 </body>
