@@ -4,6 +4,7 @@ var nombre=[];
 var gtipo;
 var gdificultad;
 var gid;
+var arrayCuadros=[];
 var tiempo_splash = 2500;
 
 window.onload = function(){
@@ -149,23 +150,40 @@ function cambioNivel(id){
     contenedor.innerHTML=salida;
     repartirPalabras(nivel)
 }
+
+
+//organizar y repartir palabras
 function repartirPalabras(nivel){
     var palabra=nombre[nivel];
     var arrayPalabra=palabra.split("");
-    var arrayCuadros=arrayPalabra.sort();
+    arrayCuadros=shuffle(arrayPalabra);
     var contenedor=document.getElementById("letras")
     var salida="";
     for(var i=0;i < arrayPalabra.length;i++){
 
-        salida+='<div class="cuadradosLetras">'+arrayCuadros[i]+'</div>'
+        salida+='<div class="cuadradosLetras" id="letra'+i+'" onclick="comprobarNivel('+i+')">'+arrayCuadros[i]+'</div>'
 
     }
     contenedor.innerHTML=salida;
 
 }
-function comprobarNivel(){
 
+//comprobar nivel
+function comprobarNivel(id){
+    
 
+}
+
+//shuffle
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
 }
 
 //pantalla splash
