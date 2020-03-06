@@ -1,6 +1,6 @@
 var secciones = [];
 var imagenes = [];
-var contenedor;
+var nombre=[];
 var gtipo;
 var gdificultad;
 var gid;
@@ -26,7 +26,6 @@ function inicializarReferencias(){
     secciones[8] = document.getElementById("creditos");
     secciones[9] = document.getElementById("splash");
 
-    contenedor=document.getElementById("pistaImg");
 
 }
 
@@ -75,6 +74,26 @@ nombre[7]="KINGKONG";
 nombre[8]="MOBYDICK";
 nombre[9]="VIERNES13";
 nombre[10]="VOLVERALFUTURO";
+nombre[11]="VOLVERALFUTURO";
+nombre[12]="VOLVERALFUTURO";
+nombre[13]="VOLVERALFUTURO";
+nombre[14]="VOLVERALFUTURO";
+nombre[15]="VOLVERALFUTURO";
+nombre[16]="VOLVERALFUTURO";
+nombre[17]="VOLVERALFUTURO";
+nombre[18]="VOLVERALFUTURO";
+nombre[19]="VOLVERALFUTURO";
+nombre[20]="VOLVERALFUTURO";
+nombre[21]="VOLVERALFUTURO";
+nombre[22]="VOLVERALFUTURO";
+nombre[23]="VOLVERALFUTURO";
+nombre[24]="VOLVERALFUTURO";
+nombre[25]="VOLVERALFUTURO";
+nombre[26]="VOLVERALFUTURO";
+nombre[27]="VOLVERALFUTURO";
+nombre[28]="VOLVERALFUTURO";
+nombre[29]="VOLVERALFUTURO";
+nombre[30]="VOLVERALFUTURO";
 
 
   //Seleccion de tipo de juego
@@ -90,6 +109,8 @@ function tipoJuego(tipo){
 
   //Seleccion de dificultad
 function cambioDificultad(dificultad){
+    var lvl=[];
+    var salida="";
     if(dificultad==0){
         gdificultad=0;
 
@@ -101,12 +122,28 @@ function cambioDificultad(dificultad){
         gdificultad=10;
     }
 
+    lvl[1]=document.getElementById("lvl1")
+    lvl[2]=document.getElementById("lvl2")
+    lvl[3]=document.getElementById("lvl3")
+    lvl[4]=document.getElementById("lvl4")
+    lvl[5]=document.getElementById("lvl5")
+    var nivelImagen=gtipo+gdificultad;
+    for(var i=1;i <=5;i++){
+
+        contenedor=lvl[i];
+        var src= imagenes[nivelImagen+i]
+        salida='<img  class ="btn_Selec" src="'+src+'"></img>'
+        contenedor.innerHTML=salida;
+        
+    }
+
 }
   //Cambio de nivel
 
 function cambioNivel(id){
     nivel=gtipo+gdificultad+id;
     var nivelActual=imagenes[nivel]; 
+    contenedor=document.getElementById("pistaImg");
     var estilos ="style= 'width:200px; height:200px;'"
     salida = '<img  id ="imgNivel" src="'+nivelActual+'" '+estilos+' ></img>';
     contenedor.innerHTML=salida;
