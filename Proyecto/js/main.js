@@ -161,7 +161,7 @@ function repartirPalabras(nivel){
     var salida="";
     for(var i=0;i < arrayPalabra.length;i++){
 
-        salida+='<div class="cuadradosLetras" id="letra'+i+'" onclick="comprobarNivel('+i+')">'+arrayCuadros[i]+'</div>'
+        salida+='<div class="cuadradosLetras" id="letra'+i+'" onclick="comprobarNivel('+i+')">'+arrayCuadros[i]+'</div>';
 
     }
     contenedor.innerHTML=salida;
@@ -170,8 +170,16 @@ function repartirPalabras(nivel){
 
 //comprobar nivel
 function comprobarNivel(id){
-    
+    var cuadro= document.getElementById("letra"+id).style.visibility="none";
+    var contenedor=document.getElementById("nomPelicula")
+    var salida="";
+    salida+='<div class="cuadrados" id="letravalidar'+id+'" onclick="regresar('+id+')">'+arrayCuadros[id]+'</div>';
+    contenedor.innerHTML=salida;
 
+}
+function regresar(id){
+    var cuadro= document.getElementById("letra"+id).style.visibility="block";
+    var cuadrovalidar= document.getElementById("letravalidar"+id).style.visibility="none";
 }
 
 //shuffle
