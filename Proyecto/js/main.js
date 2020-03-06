@@ -60,7 +60,7 @@ imagenes[26] ="img/personajes/dificil/amelie.jpg";
 imagenes[27] ="img/personajes/dificil/brillantina.jpg";
 imagenes[28] ="img/personajes/dificil/dumbo.jpg";
 imagenes[29] ="img/personajes/dificil/elreyleon.jpg";
-imagenes[30] ="img/personajes/dificil/harrypotter.jpg";
+imagenes[30] ="img/personajes/dificil/harry potter.jpg";
 
 // Declaracion de victoria
 
@@ -147,8 +147,26 @@ function cambioNivel(id){
     var estilos ="style= 'width:200px; height:200px;'"
     salida = '<img  id ="imgNivel" src="'+nivelActual+'" '+estilos+' ></img>';
     contenedor.innerHTML=salida;
+    repartirPalabras(nivel)
 }
+function repartirPalabras(nivel){
+    var palabra=nombre[nivel];
+    var arrayPalabra=palabra.split("");
+    var arrayCuadros=arrayPalabra.sort();
+    var contenedor=document.getElementById("letras")
+    var salida="";
+    for(var i=0;i < arrayPalabra.length;i++){
 
+        salida+='<div class="cuadradosLetras">'+arrayCuadros[i]+'</div>'
+
+    }
+    contenedor.innerHTML=salida;
+
+}
+function comprobarNivel(){
+
+
+}
 
 //pantalla splash
 
