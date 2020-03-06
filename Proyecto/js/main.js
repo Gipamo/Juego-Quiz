@@ -83,7 +83,6 @@ function cambioNivel(id){
     contenedor.innerHTML=salida;
 }
 
- 
 
 //pantalla splash
 
