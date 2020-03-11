@@ -7,6 +7,7 @@ var gid;
 var arrayCuadros=[];
 var tiempo_splash = 2500;
 var salidaCuadrados="";
+var pruebas;
 
 window.onload = function(){
     inicializarReferencias();
@@ -171,7 +172,8 @@ function repartirPalabras(nivel){
 
 //comprobar nivel
 function comprobarNivel(id){
-    var contenedor=document.getElementById("nomPelicula")
+    var contenedor=document.getElementById("nomPelicula");
+    var comprobar=document.getElementById("letravalidar"+id)
     salidaCuadrados+='<div class="cuadrados block" id="letravalidar'+id+'" onclick="regresar('+id+')">'+arrayCuadros[id]+'</div>';
     contenedor.innerHTML=salidaCuadrados;
     var cuadro= document.getElementById("letra"+id);
@@ -179,9 +181,15 @@ function comprobarNivel(id){
     cuadro.classList.remove("block");
 
 }
+
+//regresar letras
 function regresar(id){
-    var cuadro= document.getElementById("letra"+id).classList.remove("oculto");
-    var cuadrovalidar= document.getElementById("letravalidar"+id).style.visibility="none";
+    var cuadro=document.getElementById("letra"+id);
+    cuadro.classList.remove("oculto");
+    cuadro.classList.add("block");
+    var cuadrovalidar= document.getElementById("letravalidar"+id);
+    cuadrovalidar.classList.remove("block")
+    cuadrovalidar.classList.add("oculto");
 }
 
 //shuffle
@@ -214,6 +222,9 @@ function cambiarSeccion(id_seccion){
     
         secciones[id_seccion].classList.remove("oculto");
         secciones[id_seccion].classList.add("flex");
+
     }
-    
+    var contenedor=document.getElementById("nomPelicula");
+    contenedor.innerHTML="";
+    salidaCuadrados="";
 }
