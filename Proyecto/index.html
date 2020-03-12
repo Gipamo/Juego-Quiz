@@ -51,7 +51,7 @@
         <div class="contenedor">
             <h2>Dificultad</h2>
             <div id="botones">
-                <button class="button btn_Niveles" onclick="cambioDificultad(0);cambiarSeccion(4) " href="javascript:void()">Facil</button>
+                <button class="button btn_Niveles" onclick="cambioDificultad(0);cambiarSeccion(4) " href="javascript:void()">Fácil</button>
                 <button class="button btn_Niveles" onclick="cambioDificultad(1);cambiarSeccion(4)" href="javascript:void()">Medio</button>
                 <button class="button btn_Niveles" onclick="cambioDificultad(2);cambiarSeccion(4)" href="javascript:void()">Dificil</button>
             </div>
@@ -72,44 +72,39 @@
         </div>
     </section>
     <section id="juego" class="juego oculto">
-<<<<<<< HEAD
-        <img class="Icon" src="img/arrow-alt-circle-left-regular.png" alt="" onclick="botonVolver(4)">
-        
-=======
-        <img class="Icon" src="img/arrow-alt-circle-left-regular.png" alt="" onclick="cambiarSeccion(4)">
->>>>>>> 4a6790dceb298e432e41bf6b082f9f01dae51cfe
+        <img class="Icon" src="img/images.png" alt="" onclick="botonVolver(4)">
         <div class="contenedor">
             <div class="ContenedorTicket">
                 <img class="Ticket" src="img/Ticket.png" alt="">
                 <div class="NumTicket">1</div>
             </div>
-            
-            
-            <div class="Cont">
-                <div id="pistaImg"></div>
-                <img class="RegresarLetra" src="img/Regresar.png" alt="">
-                
-            </div>
-            <div id="nomPelicula">
-            </div>
-            <div id="letras">
-            </div>
-            <button  id="lvl1" onclick="regresar()" href="javascript:void()">Ok</button>
-        </div>
-    </section>
-    <section id="final" class="final oculto">
-        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="botonVolver(4)">
-        <div class="contenedor">
             <div id="pistaImg"></div>
             <div id="nomPelicula">
             </div>
             <div id="letras">
             </div>
-            <div>
-                <p>Aqui dato curioso</p>
-                <button onclick="cambiarSeccion(1)">Ok</button>
-            </div>
+            <img id="lvl1" class="BtnBorrar" onclick="regresar()" href="javascript:void()" src="img/Borrar.png" alt="" >
         </div>
+    </section>
+    <section id="final" class="final oculto">
+        
+        <div class="contenedor">
+            <div class="ContenedorTicket2">
+                <img class="Ticket" src="img/Ticket.png" alt="">
+                <div class="NumTicket">1</div>
+            </div>
+            
+            <p>!! Correcto ¡¡</p>
+            <div id="pistaImg"></div>
+            <div id="nomPelicula">
+            </div>
+            <div id="letras">
+            </div>
+            <div class="Titulo">Sabias que...</div>
+            <div class="Dato">Aqui dato curioso</div> 
+            <img class="Like" src="img/like.png" onclick="cambiarSeccion(4)" alt="">
+        </div>
+        
     </section>
     <section id="instrucciones" class="instrucciones oculto">
         <img class="Icon" src="img/Trazado 12.png" alt="" onclick="botonVolver(1)">
