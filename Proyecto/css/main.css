@@ -132,7 +132,11 @@ h2{
 .seleccion{
     background: #394b8b;
 }
-
+#dificultadActual{
+    font-size: 35px;
+    color: white;
+    margin-bottom: 20px;
+}
 /*---------------- Juego --------------*/
 
 #imgNivel{
