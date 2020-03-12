@@ -8,7 +8,6 @@ section {
     width: 360px;
     height: 590px;
     text-align: center;
-    
 }
 .flex{
     display: flex;
@@ -21,13 +20,11 @@ section {
 }
 .splash{
     background: #394b8b;
-    
 }
 h1{
     font-size: 45px;
     color: white;
     margin: auto;
-    
 }
 .H1Splash{
     background-color: #35b2a0;
@@ -35,13 +32,10 @@ h1{
     padding: 5px 10px;
 }
 h2{
-
     font-size: 35px;
     color: white;
     margin-bottom: 50px;
-    
 }
-
 .Icon{
     width: 35px;
     height: 35px;
@@ -52,7 +46,6 @@ h2{
 .peliSplash, .quizSplash{
     color: white;
     display: flex;
-
 }
 .quiz,.peli{
     color: white;
@@ -69,7 +62,6 @@ h2{
     height: 37px;
     width: 80px;
 }
-
 .Cuadro{
     height: 35px;
     width: 38px;
@@ -77,14 +69,10 @@ h2{
     margin: 1px;
 }
 
-
 /*---------------- Inicio --------------*/
 .inicio {
     background: #394b8b;
-    
 }
-
-
 
 /*---------------- Botones --------------*/
 .button{
@@ -98,10 +86,8 @@ h2{
     border: solid white 2px;
 }
 .btn_Niveles{
-    
     background-color: #35b2a0;
     color: white;
-    
 }
 .btn_Jugar{
     background-color: #35b2a0;
@@ -129,18 +115,10 @@ h2{
 }
 
 
-
-
-
-
-
-
-
 /*---------------- Categoria --------------*/
 
 .categoria{
     background: #394b8b;
-    
 }
 
 
@@ -150,46 +128,42 @@ h2{
     background:#394b8b;
 }
 
-
 /*---------------- Seleccion --------------*/
 .seleccion{
     background: #394b8b;
-
 }
 
 /*---------------- Juego --------------*/
 .juego{
-    background: #394b8b;
-    
+    background: #394b8b; 
 }
-.pistaImg{
-    width: 130px;
-    height: 130px;
-    margin: auto;
+#imgNivel{
+    border-radius: 10px;
+    border: solid 2px white;
 }
 
-.letras{
-    margin-top: 60px;
-    
+#letras{
+    margin-top: 10px;
 }
-.NomPelicula{
-    margin-top: 20px;
+#nomPelicula{
+    margin-top: 15px;
 }
-
 .cuadrados{
     background-color: #35b2a0;
+    width: 40px;
+    height: 35px;
+    margin: 0px 3px;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
 }
-
-
-.cuadrados, .cuadradosLetras{
-    width: 50px;
-    height: 50px;
+.cuadradosLetras{
+    width: 40px;
+    height: 35px;
     margin: 0px 3px;
     border: 3px solid #35b2a0;
     border-radius: 10px;
+    background-color: whitesmoke;    
 }
-
-
 
 /*---------------- Final --------------*/
 .final{
@@ -201,7 +175,6 @@ h2{
     background: #f3ba08;
 }
 .CuadroInstru{
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -211,8 +184,6 @@ h2{
     margin: 1px;
     border-radius: 10px;
     border: 1px solid white;
-    
-    
 }
 .SpanInstru{
     display: flex;
@@ -245,9 +216,7 @@ h2{
     display: flex;
     align-items: center;
     margin: auto;
-    
 }
-
 span{
     margin: auto;
     color: white;
