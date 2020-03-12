@@ -37,7 +37,7 @@
         </div>
     </section>
     <section id="categoria" class="categoria oculto">
-        <img  class="Icon" src="img/Trazado 12.png" alt="" onclick="botonVolver(1)">
+        <img  id="btnVolver" class="Icon" src="img/Trazado 12.png" alt="" onclick="botonVolver(1)">
         <div class="contenedor">
             <h2>¿Con que quieres jugar?</h2>
             <div id="botones">
@@ -47,7 +47,7 @@
         </div>
     </section>
     <section id="nivel" class="nivel oculto">
-        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="botonVolver(2)">
+        <img class="Icon" id="btnVolver" src="img/Trazado 12.png" alt="" onclick="botonVolver(2)">
         <div class="contenedor">
             <h2>Dificultad</h2>
             <div id="botones">
@@ -58,7 +58,7 @@
         </div>
     </section>
     <section id="seleccion" class="seleccion oculto">
-        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="botonVolver(3)">
+        <img class="Icon" id="btnVolver" src="img/Trazado 12.png" alt="" onclick="botonVolver(3)">
         <div class="contenedor">
             <h2 id="dificultadActual"></h2>
             <div id="botones" class="BtnSeleccion">
@@ -72,7 +72,7 @@
         </div>
     </section>
     <section id="juego" class="juego oculto">
-        <img class="Icon" src="img/images.png" alt="" onclick="botonVolver(4)">
+        <img class="Icon" id="btnVolver" src="img/images.png" alt="" onclick="botonVolver(4)">
         <div class="contenedor">
             <div class="ContenedorTicket">
                 <img class="Ticket" src="img/Ticket.png" alt="">
@@ -83,7 +83,12 @@
             </div>
             <div id="letras">
             </div>
-            <img id="lvl1" class="BtnBorrar" onclick="regresar()" href="javascript:void()" src="img/Borrar.png" alt="" >
+            <img id="btnDelete" class="BtnBorrar" onclick="regresar()" href="javascript:void()" src="img/Borrar.png" alt="" >
+            <input type="button" id="abrirAyuda" onclick="pedirAyuda()" value="Ayuda">
+            <div id="ventana" class="alerta oculto">
+                <div id="ayudaContenido">
+                </div>
+            </div>
         </div>
     </section>
     <section id="final" class="final oculto">
@@ -107,13 +112,13 @@
         
     </section>
     <section id="instrucciones" class="instrucciones oculto">
-        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="botonVolver(1)">
+        <img class="Icon" id="btnVolver" src="img/Trazado 12.png" alt="" onclick="botonVolver(1)">
         
         <div class="contenedor">
             <h2>Instrucciones</h2>
             <div class="SpanInstru">
                 <span class="CuadroInstru">1</span>
-                <span class="Instru">Adivina el nombre de la película.</span>
+                <span class="Instru">Adivina el nombre de la película o del Personaje.</span>
             </div>
             <div class="SpanInstru">
                 <span class="CuadroInstru">2</span>
@@ -121,12 +126,9 @@
             </div>
             <div class="SpanInstru">
                 <span class="CuadroInstru">3</span>
-                <span class="Instru">Suma puntos que pueden ser usados en las Ayudas.</span>
+                <span class="Instru">Suma puntos que pueden ser usados en las Ayudas, pero te cuidado, Cuando uses una ayuda, se perdera si cambia de nivel.</span>
             </div>
-            <div class="SpanInstru">
-                <span class="CuadroInstru">4</span>
-                <span class="Instru">Adivina y desbloquea nuevos niveles.</span>
-            </div>
+
         </div>
     </section>
     <section id="creditos" class="creditos oculto">

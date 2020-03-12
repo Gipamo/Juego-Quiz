@@ -7,11 +7,14 @@ var gid;
 var textoComprobar="";
 var numeroComprobar;
 var tiempo_splash = 2500;
+var ayuda=false;  //define si nse pidio ayuda o no
+var letraAyuda="";
 var arrayCuadros=[]; // Array con las letras desordenadas
 var arrayLetras=[]; //Array con los cuadradrados de las letras del teclado
 var letrasDevolver=[]; //array con las posicion de las letras seleccionadas
 var salidaCuadrados=[]; //  Array con los cuadros de las letras seleccionadas
 var pruebas=[]; //Array con los elementos para validar el nivel correcto
+var componentes=[];
 
 window.onload = function(){
     inicializarReferencias();
@@ -39,11 +42,11 @@ function inicializarReferencias(){
 // Declaracion de imagenes
 
 imagenes[1] ="img/peliculas/facil/aladdin.jpg";
-imagenes[2] ="img/peliculas/facil/comoentrenaratudragon.jpg";
+imagenes[2] ="img/peliculas/facil/toystory.jpg";
 imagenes[3] ="img/peliculas/facil/jurassicpark.jpg";
 imagenes[4] ="img/peliculas/facil/monstersinc.jpg";
 imagenes[5] ="img/peliculas/facil/ratatouille.jpg";
-imagenes[6] ="img/peliculas/normal/aliciaenelpaisdelasmaravillas.jpg";
+imagenes[6] ="img/peliculas/normal/walle.jpg";
 imagenes[7] ="img/peliculas/normal/kingkong.jpg";
 imagenes[8] ="img/peliculas/normal/mobydick.jpg";
 imagenes[9] ="img/peliculas/normal/viernes13.jpg";
@@ -72,35 +75,35 @@ imagenes[30] ="img/personajes/dificil/harry potter.jpg";
 // Declaracion de victoria
 
 nombre[1]="ALADDIN";
-nombre[2]="COMOENTRENARATUDRAGON";
+nombre[2]="TOYSTORY";
 nombre[3]="JURASSICPARK";
 nombre[4]="MONSTERSINC";
 nombre[5]="RATATOUILLE";
-nombre[6]="ALICIAENELPAISDELASMARAVILLAS";
+nombre[6]="WALLE";
 nombre[7]="KINGKONG";
 nombre[8]="MOBYDICK";
 nombre[9]="VIERNES13";
 nombre[10]="VOLVERALFUTURO";
-nombre[11]="VOLVERALFUTURO";
-nombre[12]="VOLVERALFUTURO";
-nombre[13]="VOLVERALFUTURO";
-nombre[14]="VOLVERALFUTURO";
-nombre[15]="VOLVERALFUTURO";
-nombre[16]="VOLVERALFUTURO";
-nombre[17]="VOLVERALFUTURO";
-nombre[18]="VOLVERALFUTURO";
-nombre[19]="VOLVERALFUTURO";
-nombre[20]="VOLVERALFUTURO";
-nombre[21]="VOLVERALFUTURO";
-nombre[22]="VOLVERALFUTURO";
-nombre[23]="VOLVERALFUTURO";
-nombre[24]="VOLVERALFUTURO";
-nombre[25]="VOLVERALFUTURO";
-nombre[26]="VOLVERALFUTURO";
-nombre[27]="VOLVERALFUTURO";
-nombre[28]="VOLVERALFUTURO";
-nombre[29]="VOLVERALFUTURO";
-nombre[30]="VOLVERALFUTURO";
+nombre[11]="CAZAFANTASMAS";
+nombre[12]="PSICOSIS";
+nombre[13]="PULPFICTION";
+nombre[14]="SEXANDTHECITY";
+nombre[15]="TAXIDRIVER";
+nombre[16]="BATMAN";
+nombre[17]="CAPITANAMERICA";
+nombre[18]="DEADPOOL";
+nombre[19]="IRONMAN";
+nombre[20]="SPIDERMAN";
+nombre[21]="BLANCANIEVES";
+nombre[22]="ROCKY";
+nombre[23]="SHREK";
+nombre[24]="SHERLOCKHOLMES";
+nombre[25]="VENOM";
+nombre[26]="AMELIE";
+nombre[27]="BRILLANTINA";
+nombre[28]="DUMBO";
+nombre[29]="ELREYLEON";
+nombre[30]="HARRYPOTTER";
 
 
   //Seleccion de tipo de juego
@@ -243,6 +246,7 @@ function comprobarCorrecto(){
     if(textoComprobar==nombre[numeroComprobar]){
 
         cambiarSeccion(6);
+        ayuda=false;
         textoComprobar="";
         arrayCuadros=[]; // Array con las letras desordenadas
         arrayLetras=[]; //Array con los cuadradrados de las letras del teclado
@@ -276,7 +280,7 @@ function cambiarSplash(){
 
 //Seleccion de ventanas
 function cambiarSeccion(id_seccion){
-    if(id_seccion){
+    if(id_seccion==4){
 
         for (var i in secciones) {
             secciones[i].classList.remove("flex");
@@ -285,7 +289,21 @@ function cambiarSeccion(id_seccion){
     
         secciones[id_seccion].classList.remove("oculto");
         secciones[id_seccion].classList.add("flex");
-
+        arrayCuadros=[]; // Array con las letras desordenadas
+        arrayLetras=[]; //Array con los cuadradrados de las letras del teclado
+        letrasDevolver=[]; //array con las posicion de las letras seleccionadas
+        salidaCuadrados=[]; //  Array con los cuadros de las letras seleccionadas
+        pruebas=[]; //Array con los elementos para validar el nivel correcto
+    }
+    else{
+        
+        for (var i in secciones) {
+            secciones[i].classList.remove("flex");
+            secciones[i].classList.add("oculto");
+        }
+    
+        secciones[id_seccion].classList.remove("oculto");
+        secciones[id_seccion].classList.add("flex");
     }
     var contenedor=document.getElementById("nomPelicula");
     contenedor.innerHTML="";
@@ -294,12 +312,66 @@ function cambiarSeccion(id_seccion){
 
 //boton volver
 function botonVolver(id){
-    if(id==4){
-        arrayCuadros=[]; // Array con las letras desordenadas
-        arrayLetras=[]; //Array con los cuadradrados de las letras del teclado
-        letrasDevolver=[]; //array con las posicion de las letras seleccionadas
-        salidaCuadrados=[]; //  Array con los cuadros de las letras seleccionadas
-        pruebas=[]; //Array con los elementos para validar el nivel correcto
-    }
+    ayuda=false;
     cambiarSeccion(id);
+    
+
+}
+
+function pedirAyuda(){
+    var ventanaAyuda=document.getElementById("ventana");
+    componentes[1]=document.getElementById("btnVolver");
+    componentes[2]=document.getElementById("imgNivel");
+    componentes[3]=document.getElementById("nomPelicula");
+    componentes[4]=document.getElementById("letras");
+    componentes[5]=document.getElementById("btnDelete");
+    componentes[6]=document.getElementById("abrirAyuda");
+    if(ayuda==false){
+        var contenedorAyuda=document.getElementById("ayudaContenido");
+        var salida ="";
+        salida+='<label id="texto">¿Esta seguro que quiere pedir una ayuda por 15 puntos?</label>';
+        salida+='<input type="button" id="btnSI" onclick="ayudar()" value="Si" >';
+        salida+='<input type="button" id="btnNO" onclick="retornar()"value="No" >';
+        contenedorAyuda.innerHTML=salida;
+        ventanaAyuda.classList.remove("oculto");
+        for(var i=1;i < componentes.length;i++){
+            componentes[i].classList.add("oculto");
+        }
+    }
+    else{
+        ventanaAyuda.classList.remove("oculto");
+        for(var i=1;i < componentes.length;i++){
+            componentes[i].classList.add("oculto");
+         }
+        ayudar();
+    }
+
+}
+
+function ayudar(){
+    var contenedorAyuda=document.getElementById("ayudaContenido");
+    contenedorAyuda.innerHTML="";
+    var palabra=nombre[numeroComprobar];
+    var arrayPalabra=palabra.split("");
+    var letraAyuda=arrayPalabra[0];
+    var salida="";
+    salida +='<label id="texto">La pelicula o personaje empieza por la letra "'+letraAyuda+'"</label>';
+    salida +='<input type="button" id="btnOK" onclick="retornar()" value="Ok" ></input>';
+    contenedorAyuda.innerHTML=salida;
+    ayuda=true;
+}
+function retornar(){
+    var ventanaAyuda=document.getElementById("ventana");
+    var componentes=[]
+    componentes[1]=document.getElementById("btnVolver");
+    componentes[2]=document.getElementById("imgNivel");
+    componentes[3]=document.getElementById("nomPelicula");
+    componentes[4]=document.getElementById("letras");
+    componentes[5]=document.getElementById("btnDelete");
+    componentes[6]=document.getElementById("abrirAyuda");
+    ventanaAyuda.classList.add("oculto");
+    for(var i=1;i < componentes.length;i++){
+        componentes[i].classList.remove("oculto");
+     }
+
 }
