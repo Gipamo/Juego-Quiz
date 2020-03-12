@@ -269,6 +269,14 @@ function comprobarCorrecto(){
     }
 
     else{
+        var elemento=document.getElementById("nomPelicula");
+        if(letrasDevolver.length==arrayCuadros.length){
+            elemento.className="animated jello infinite";
+        }
+        else{
+            elemento.className="";
+        }
+
     }
 }
 
