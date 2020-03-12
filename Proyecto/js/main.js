@@ -14,12 +14,14 @@ var arrayLetras=[]; //Array con los cuadradrados de las letras del teclado
 var letrasDevolver=[]; //array con las posicion de las letras seleccionadas
 var salidaCuadrados=[]; //  Array con los cuadros de las letras seleccionadas
 var pruebas=[]; //Array con los elementos para validar el nivel correcto
-var componentes=[];
+var componentes=[]; //array para las ayudas
 
 window.onload = function(){
     inicializarReferencias();
     setTimeout(cambiarSplash,tiempo_splash);
-
+    if(localStorage.getItem('puntos')==null){
+        localStorage.setItem('puntos','15');
+    }
 
 }
 
@@ -159,6 +161,14 @@ function cambioDificultad(dificultad){
 function cambioNivel(id){
     nivel=gtipo+gdificultad+id;
     var nivelActual=imagenes[nivel]; 
+
+    var contenedorTicket=document.getElementById("cntTicket");
+    var salidaTicket="";
+
+    salidaTicket += '<img class="Ticket" src="img/Ticket.png" alt=""></img>'
+    salidaTicket +='<div id="numTicket" class="NumTicket">'+localStorage.getItem('puntos')+'</div>';
+    contenedorTicket.innerHTML=salidaTicket;
+
     contenedor=document.getElementById("pistaImg");
     var estilos ="style= 'width:200px; height:200px;'"
     salida = '<img  id ="imgNivel" src="'+nivelActual+'" '+estilos+' ></img>';
@@ -182,6 +192,8 @@ function repartirPalabras(nivel){
     }
 
     contenedor.innerHTML=salida;
+
+
 
 }
 
@@ -246,6 +258,7 @@ function comprobarCorrecto(){
     if(textoComprobar==nombre[numeroComprobar]){
 
         cambiarSeccion(6);
+        modificarPuntaje(0);
         ayuda=false;
         textoComprobar="";
         arrayCuadros=[]; // Array con las letras desordenadas
@@ -330,7 +343,7 @@ function pedirAyuda(){
         var contenedorAyuda=document.getElementById("ayudaContenido");
         var salida ="";
         salida+='<label id="texto">¿Esta seguro que quiere pedir una ayuda por 15 puntos?</label>';
-        salida+='<input type="button" id="btnSI" onclick="ayudar()" value="Si" >';
+        salida+='<input type="button" id="btnSI" onclick="modificarPuntaje(1)" value="Si" >';
         salida+='<input type="button" id="btnNO" onclick="retornar()"value="No" >';
         contenedorAyuda.innerHTML=salida;
         ventanaAyuda.classList.remove("oculto");
@@ -343,22 +356,31 @@ function pedirAyuda(){
         for(var i=1;i < componentes.length;i++){
             componentes[i].classList.add("oculto");
          }
-        ayudar();
     }
 
 }
 
-function ayudar(){
-    var contenedorAyuda=document.getElementById("ayudaContenido");
-    contenedorAyuda.innerHTML="";
-    var palabra=nombre[numeroComprobar];
-    var arrayPalabra=palabra.split("");
-    var letraAyuda=arrayPalabra[0];
-    var salida="";
-    salida +='<label id="texto">La pelicula o personaje empieza por la letra "'+letraAyuda+'"</label>';
-    salida +='<input type="button" id="btnOK" onclick="retornar()" value="Ok" ></input>';
-    contenedorAyuda.innerHTML=salida;
-    ayuda=true;
+function ayudar(id){
+    if(id==1){
+        var contenedorAyuda=document.getElementById("ayudaContenido");
+        contenedorAyuda.innerHTML="";
+        var palabra=nombre[numeroComprobar];
+        var arrayPalabra=palabra.split("");
+        var letraAyuda=arrayPalabra[0];
+        var salida="";
+        salida +='<label id="texto">La pelicula o personaje empieza por la letra "'+letraAyuda+'"</label>';
+        salida +='<input type="button" id="btnOK" onclick="retornar()" value="Ok" ></input>';
+        contenedorAyuda.innerHTML=salida;
+        ayuda=true;
+    }
+    else{
+        var contenedorAyuda=document.getElementById("ayudaContenido");
+        contenedorAyuda.innerHTML="";
+        var salida="";
+        salida +='<label id="texto">"Puntos Insuficientes"</label>';
+        salida +='<input type="button" id="btnOK" onclick="retornar()" value="Ok" ></input>';
+        contenedorAyuda.innerHTML=salida;
+    }
 }
 function retornar(){
     var ventanaAyuda=document.getElementById("ventana");
@@ -374,4 +396,39 @@ function retornar(){
         componentes[i].classList.remove("oculto");
      }
 
+}
+
+function actualizarPuntaje(){
+    var contenedorTicket=document.getElementById("cntTicket");
+    var salidaTicket="";
+    salidaTicket += '<img class="Ticket" src="img/Ticket.png" alt=""></img>'
+    salidaTicket +='<div id="numTicket" class="NumTicket">'+localStorage.getItem('puntos')+'</div>';
+    contenedorTicket.innerHTML=salidaTicket;
+}
+
+function modificarPuntaje(id){
+    var puntaje=localStorage.getItem('puntos');
+    if(id==1){
+        var puntosNumero=parseInt(puntaje,10);
+        if(puntosNumero >=15){
+            puntosNumero=puntosNumero-15;
+            ayudar(1);
+            localStorage.setItem('puntos',puntosNumero);
+            actualizarPuntaje();
+        }
+        else{
+            ayudar(0);
+        }
+    }
+    else{
+        var puntosNumero=parseInt(puntaje,10);
+        if(puntosNumero <= 60){
+            puntosNumero=puntosNumero+3;
+            localStorage.setItem('puntos',puntosNumero);
+            actualizarPuntaje();
+        }
+        else{
+        }
+
+    }
 }
