@@ -139,7 +139,21 @@ h2{
     border-radius: 10px;
     border: solid 2px white;
 }
-
+.Ticket{
+    width: 90px;
+    height: 55px;
+}
+.ContenedorTicket{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.NumTicket{
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -62%);
+}
 #letras{
     margin-top: 10px;
 }
