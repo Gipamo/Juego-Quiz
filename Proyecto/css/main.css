@@ -134,9 +134,7 @@ h2{
 }
 
 /*---------------- Juego --------------*/
-.juego{
-    background: #394b8b; 
-}
+
 #imgNivel{
     border-radius: 10px;
     border: solid 2px white;
@@ -153,7 +151,6 @@ h2{
     width: 40px;
     height: 35px;
     margin: 0px 3px;
-    border: 2px solid whitesmoke;
     border-radius: 10px;
 }
 .cuadradosLetras{
