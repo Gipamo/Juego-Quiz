@@ -143,6 +143,12 @@ h2{
     width: 90px;
     height: 55px;
 }
+
+.RegresarLetra{
+    float: left;
+    margin-top: 50%;
+    
+}
 .ContenedorTicket{
     position: relative;
     display: inline-block;
