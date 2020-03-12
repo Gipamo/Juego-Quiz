@@ -37,7 +37,7 @@
         </div>
     </section>
     <section id="categoria" class="categoria oculto">
-        <img  class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(1)">
+        <img  class="Icon" src="img/Trazado 12.png" alt="" onclick="botonVolver(1)">
         <div class="contenedor">
             <h2>¿Con que quieres jugar?</h2>
             <div id="botones">
@@ -47,7 +47,7 @@
         </div>
     </section>
     <section id="nivel" class="nivel oculto">
-        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(2)">
+        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="botonVolver(2)">
         <div class="contenedor">
             <h2>Dificultad</h2>
             <div id="botones">
@@ -58,9 +58,9 @@
         </div>
     </section>
     <section id="seleccion" class="seleccion oculto">
-        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(3)">
+        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="botonVolver(3)">
         <div class="contenedor">
-            <h2></h2>
+            <h2 id="dificultadActual"></h2>
             <div id="botones" class="BtnSeleccion">
                 <button class="btn_Selec" id="lvl1" onclick="cambioNivel(1);cambiarSeccion(5)" href="javascript:void()">Nivel 1</button>
                 <button class="btn_Selec" id="lvl2" onclick="cambioNivel(2);cambiarSeccion(5)" href="javascript:void()">Nivel 2</button>
@@ -72,7 +72,7 @@
         </div>
     </section>
     <section id="juego" class="juego oculto">
-        <img class="Icon" src="img/arrow-alt-circle-left-regular.png" alt="" onclick="cambiarSeccion(4)">
+        <img class="Icon" src="img/arrow-alt-circle-left-regular.png" alt="" onclick="botonVolver(4)">
         
         <div class="contenedor">
             <div class="ContenedorTicket">
@@ -84,11 +84,11 @@
             </div>
             <div id="letras">
             </div>
-            <button  id="lvl1" onclick="cambioNivel(1);cambiarSeccion(6)" href="javascript:void()">Ok</button>
+            <button  id="lvl1" onclick="regresar()" href="javascript:void()">Ok</button>
         </div>
     </section>
     <section id="final" class="final oculto">
-        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(4)">
+        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="botonVolver(4)">
         <div class="contenedor">
             <div id="pistaImg"></div>
             <div id="nomPelicula">
@@ -102,7 +102,7 @@
         </div>
     </section>
     <section id="instrucciones" class="instrucciones oculto">
-        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(1)">
+        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="botonVolver(1)">
         
         <div class="contenedor">
             <h2>Instrucciones</h2>

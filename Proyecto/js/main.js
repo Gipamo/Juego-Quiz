@@ -4,10 +4,14 @@ var nombre=[];
 var gtipo;
 var gdificultad;
 var gid;
-var arrayCuadros=[];
+var textoComprobar="";
+var numeroComprobar;
 var tiempo_splash = 2500;
-var salidaCuadrados="";
-var pruebas;
+var arrayCuadros=[]; // Array con las letras desordenadas
+var arrayLetras=[]; //Array con los cuadradrados de las letras del teclado
+var letrasDevolver=[]; //array con las posicion de las letras seleccionadas
+var salidaCuadrados=[]; //  Array con los cuadros de las letras seleccionadas
+var pruebas=[]; //Array con los elementos para validar el nivel correcto
 
 window.onload = function(){
     inicializarReferencias();
@@ -114,15 +118,19 @@ function tipoJuego(tipo){
 function cambioDificultad(dificultad){
     var lvl=[];
     var salida="";
+    var texto="";
     if(dificultad==0){
         gdificultad=0;
+        texto='<h2 id="dificultadActual">Facil</h2>';
 
     }
     else if (dificultad==1){
         gdificultad=5;
+        texto='<h2 id="dificultadActual">Medio</h2>';
     }
     else{
         gdificultad=10;
+        texto='<h2 id="dificultadActual">Dificil</h2>';
     }
 
     lvl[1]=document.getElementById("lvl1")
@@ -131,6 +139,8 @@ function cambioDificultad(dificultad){
     lvl[4]=document.getElementById("lvl4")
     lvl[5]=document.getElementById("lvl5")
     var nivelImagen=gtipo+gdificultad;
+    var contenedorSeleccion=document.getElementById("dificultadActual");
+    contenedorSeleccion.innerHTML=texto;
     for(var i=1;i <=5;i++){
 
         contenedor=lvl[i];
@@ -150,6 +160,7 @@ function cambioNivel(id){
     var estilos ="style= 'width:200px; height:200px;'"
     salida = '<img  id ="imgNivel" src="'+nivelActual+'" '+estilos+' ></img>';
     contenedor.innerHTML=salida;
+    numeroComprobar=nivel;
     repartirPalabras(nivel)
 }
 
@@ -162,10 +173,11 @@ function repartirPalabras(nivel){
     var contenedor=document.getElementById("letras")
     var salida="";
     for(var i=0;i < arrayPalabra.length;i++){
-
-        salida+='<div class="cuadradosLetras block" id="letra'+i+'" onclick="comprobarNivel('+i+')" value="'+arrayCuadros[i]+'">'+arrayCuadros[i]+'</div>';
+        arrayLetras[i]='<div class="cuadradosLetras block" id="letra'+i+'" onclick="comprobarNivel('+i+')">'+arrayCuadros[i]+'</div>';
+        salida+=arrayLetras[i];
 
     }
+
     contenedor.innerHTML=salida;
 
 }
@@ -173,23 +185,74 @@ function repartirPalabras(nivel){
 //comprobar nivel
 function comprobarNivel(id){
     var contenedor=document.getElementById("nomPelicula");
-    var comprobar=document.getElementById("letravalidar"+id)
-    salidaCuadrados+='<div class="cuadrados block" id="letravalidar'+id+'" onclick="regresar('+id+')">'+arrayCuadros[id]+'</div>';
-    contenedor.innerHTML=salidaCuadrados;
-    var cuadro= document.getElementById("letra"+id);
-    cuadro.classList.add("oculto");
-    cuadro.classList.remove("block");
+    var elementoPush='<div class="cuadrados block" id="letravalidar'+id+'" >'+arrayCuadros[id]+'</div>';
+    salidaCuadrados.push(elementoPush);
+    var salida="";
+    for(var i=0;i < salidaCuadrados.length;i++){
+
+        salida+=salidaCuadrados[i];
+
+    }
+    contenedor.innerHTML=salida;
+    var agregarProbar=document.getElementById("letravalidar"+id);
+    pruebas.push(agregarProbar.innerHTML);
+    letrasDevolver.push(id)
+    arrayLetras[id]='<div class="cuadradosLetras oculto" id="letra'+id+'" onclick="comprobarNivel('+id+')">'+arrayCuadros[id]+'</div>';
+    var contenedorLetras=document.getElementById("letras");
+    var salidaLetras="";
+    for(var i=0;i < arrayLetras.length;i++){
+        salidaLetras+=arrayLetras[i];
+
+    }
+
+    contenedorLetras.innerHTML=salidaLetras;
+    comprobarCorrecto();
 
 }
 
 //regresar letras
-function regresar(id){
-    var cuadro=document.getElementById("letra"+id);
-    cuadro.classList.remove("oculto");
-    cuadro.classList.add("block");
-    var cuadrovalidar= document.getElementById("letravalidar"+id);
-    cuadrovalidar.classList.remove("block")
-    cuadrovalidar.classList.add("oculto");
+function regresar(){
+    salidaCuadrados.pop();
+    pruebas.pop();
+    var id=letrasDevolver.pop();
+    arrayLetras[id]='<div class="cuadradosLetras block" id="letra'+id+'" onclick="comprobarNivel('+id+')">'+arrayCuadros[id]+'</div>';
+    var contenedor=document.getElementById("nomPelicula");
+    var salida="";
+    for(var i=0;i < salidaCuadrados.length;i++){
+
+        salida+=salidaCuadrados[i];
+
+    }
+    contenedor.innerHTML=salida;
+    var contenedorLetras=document.getElementById("letras");
+    var salidaLetras="";
+    for(var i=0;i < arrayLetras.length;i++){
+        salidaLetras+=arrayLetras[i];
+
+    }
+
+    contenedorLetras.innerHTML=salidaLetras;
+
+
+
+}
+
+//Comprueba que el elemento este correcto
+function comprobarCorrecto(){
+    textoComprobar=pruebas.join('');
+    if(textoComprobar==nombre[numeroComprobar]){
+
+        cambiarSeccion(6);
+        textoComprobar="";
+        arrayCuadros=[]; // Array con las letras desordenadas
+        arrayLetras=[]; //Array con los cuadradrados de las letras del teclado
+        letrasDevolver=[]; //array con las posicion de las letras seleccionadas
+        salidaCuadrados=[]; //  Array con los cuadros de las letras seleccionadas
+        pruebas=[]; //Array con los elementos para validar el nivel correcto
+    }
+
+    else{
+    }
 }
 
 //shuffle
@@ -226,5 +289,17 @@ function cambiarSeccion(id_seccion){
     }
     var contenedor=document.getElementById("nomPelicula");
     contenedor.innerHTML="";
-    salidaCuadrados="";
+
+}
+
+//boton volver
+function botonVolver(id){
+    if(id==4){
+        arrayCuadros=[]; // Array con las letras desordenadas
+        arrayLetras=[]; //Array con los cuadradrados de las letras del teclado
+        letrasDevolver=[]; //array con las posicion de las letras seleccionadas
+        salidaCuadrados=[]; //  Array con los cuadros de las letras seleccionadas
+        pruebas=[]; //Array con los elementos para validar el nivel correcto
+    }
+    cambiarSeccion(id);
 }
