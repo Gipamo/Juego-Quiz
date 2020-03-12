@@ -143,16 +143,19 @@ h2{
     width: 90px;
     height: 55px;
 }
-
-.RegresarLetra{
-    float: left;
-    margin-top: 50%;
-    
+.BtnAtras{
+    border-top: 10px;
 }
-.ContenedorTicket{
+.ContenedorTicket, .ContenedorTicket2{
     position: relative;
     display: inline-block;
     text-align: center;
+}
+.ContenedorTicket{
+    margin-bottom: 60px;
+}
+.ContenedorTicket2{
+    margin-bottom: 40px;
 }
 .NumTicket{
     position: absolute;
@@ -185,6 +188,32 @@ h2{
 /*---------------- Final --------------*/
 .final{
     background: #6dbe45;
+}
+
+.Like{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    right: 300px;
+    cursor: pointer;
+}
+p{
+    font-size: 35px;
+    color: white;
+}
+.Titulo{
+    color: white;
+    font-size: 20px;
+    margin-right: 60%;
+}
+.Dato{
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 5px 5px;
+    font-size: 18px;
+    justify-content: center;
 }
 
 /*---------------- Instrucciones --------------*/
