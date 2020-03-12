@@ -185,7 +185,6 @@ function repartirPalabras(nivel){
 //comprobar nivel
 function comprobarNivel(id){
     var contenedor=document.getElementById("nomPelicula");
-<<<<<<< HEAD
     var elementoPush='<div class="cuadrados block" id="letravalidar'+id+'" >'+arrayCuadros[id]+'</div>';
     salidaCuadrados.push(elementoPush);
     var salida="";
@@ -208,15 +207,6 @@ function comprobarNivel(id){
 
     contenedorLetras.innerHTML=salidaLetras;
     comprobarCorrecto();
-=======
-    var comprobar=document.getElementById("letravalidar"+id)
-    salidaCuadrados+='<div class="cuadrados block" id="letravalidar'+id+'" onclick="regresar('+id+')">'+arrayCuadros[id]+'</div>';
-    contenedor.innerHTML=salidaCuadrados;
-    var cuadro= document.getElementById("letra"+id);
-    cuadro.classList.add("oculto");
-    cuadro.classList.remove("block");
-    
->>>>>>> 4a6790dceb298e432e41bf6b082f9f01dae51cfe
 
 }
 
