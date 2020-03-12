@@ -179,6 +179,7 @@ function comprobarNivel(id){
     var cuadro= document.getElementById("letra"+id);
     cuadro.classList.add("oculto");
     cuadro.classList.remove("block");
+    
 
 }
 
