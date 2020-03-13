@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
     <script type="text/javascript" src="js/main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <title>Juego</title>
 </head>
@@ -82,12 +83,27 @@
             <div id="letras">
             </div>
             <img id="btnDelete" class="BtnBorrar" onclick="regresar()" href="javascript:void()" src="img/Borrar.png" alt="" >
-            <input type="button" id="abrirAyuda" onclick="pedirAyuda()" value="Ayuda">
             <div id="ventana" class="alerta oculto">
                 <div id="ayudaContenido">
+                    
                 </div>
             </div>
+            <!--<Img src="img/Ayuda.png" id="abrirAyuda" onclick="cambiarSeccion(10)"></Img>-->
             <Img src="img/Ayuda.png" id="abrirAyuda" onclick="pedirAyuda()"></Img>
+        </div>
+        
+    </section>
+    <section id="Ayuda" class="Ayuda oculto">
+        <img class="Icon" id="btnVolver" src="img/images.png" alt="" onclick="botonVolver(5)">
+        <div class="contenedor">
+            <h2>Ayuda</h2>
+            <p>Esta ayuda te dira cual es la primera letra</p>
+            <div id="pistaImg"><img src="img/Ayuda.png" alt=""></div>
+            <div>
+                <div>Costo:</div>
+                <div id="cntTicket" class="ContenedorTicket">
+                </div>
+            </div>
         </div>
         
     </section>
@@ -98,7 +114,8 @@
             <div id="cntTicket2" class="ContenedorTicket2">
             </div>
             <p>¡¡ Correcto !!</p>
-            <div id="imgFinal"></div>
+            <div id="ContenedorFinal">
+            </div>
             <div id="nomPeliculaFinal">
             </div>
             <div class="Titulo">Sabias que...</div>
