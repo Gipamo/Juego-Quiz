@@ -485,7 +485,7 @@ function crearFinal(){
 
     contenedorDato=document.getElementById("datoCurioso");
     var salidaDato="";
-    salidaDato='<div id="datoCurioso" class="Dato">'+DatosCuriosos[numeroComprobar]+'</div> ';
+    salidaDato='<div id="datoCurioso" >'+DatosCuriosos[numeroComprobar]+'</div> ';
     contenedorDato.innerHTML=salidaDato;
 
 }
