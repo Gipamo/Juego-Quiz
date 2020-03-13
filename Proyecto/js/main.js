@@ -490,6 +490,13 @@ function crearFinal(){
 }
 function crearFinal(){
 
+    var contenedorTicket=document.getElementById("cntTicket2");
+    var salidaTicket="";
+
+    salidaTicket += '<img class="Ticket" src="img/Ticket.png" alt=""></img>'
+    salidaTicket +='<div id="numTicket2" class="NumTicket">'+localStorage.getItem('puntos')+'</div>';
+    contenedorTicket.innerHTML=salidaTicket;
+
     var contenedor=document.getElementById("imgFinal");
     var estilos ="style= 'width:200px; height:200px;'"
     var salida="";
