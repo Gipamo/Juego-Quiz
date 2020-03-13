@@ -296,6 +296,7 @@ function comprobarCorrecto(){
 
         cambiarSeccion(6);
         modificarPuntaje(0);
+        crearFinal();
         ayuda=false;
         textoComprobar="";
         arrayCuadros=[]; // Array con las letras desordenadas
@@ -476,4 +477,19 @@ function modificarPuntaje(id){
         }
 
     }
+}
+
+function crearFinal(){
+
+    contenedor=document.getElementById("imgFinal");
+    var estilos ="style= 'width:200px; height:200px;'"
+    var salida="";
+    salida = '<img  id ="imgNivel" src="'+imagenes[numeroComprobar]+'" '+estilos+' ></img>';
+    contenedor.innerHTML=salida;
+
+    contenedorDato=document.getElementById("datoCurioso");
+    var salidaDato="";
+    salidaDato='<div id="datoCurioso" class="Dato">'+DatosCuriosos[numeroComprobar]+'</div> ';
+    contenedorDato.innerHTML=salidaDato;
+
 }
