@@ -38,6 +38,7 @@ function inicializarReferencias(){
     secciones[7] = document.getElementById("instrucciones");
     secciones[8] = document.getElementById("creditos");
     secciones[9] = document.getElementById("splash");
+    secciones[10] = document.getElementById("Ayuda");
 
 
 }
@@ -410,8 +411,8 @@ function ayudar(id){
         var arrayPalabra=palabra.split("");
         var letraAyuda=arrayPalabra[0];
         var salida="";
-        salida +='<label id="texto">La pelicula o personaje empieza por la letra "'+letraAyuda+'"</label>';
-        salida +='<input type="button" id="btnOK" onclick="retornar()" value="Ok" ></input>';
+        salida +='<div class="Parrafo"><label id="texto">La pelicula o personaje empieza por la letra "'+letraAyuda+'"</label></div>';
+        salida +='<div class=BtnAlerta"><input type="button" id="btnOK" onclick="retornar()" value="Ok" ></input></div>';
         contenedorAyuda.innerHTML=salida;
         ayuda=true;
     }
@@ -419,8 +420,8 @@ function ayudar(id){
         var contenedorAyuda=document.getElementById("ayudaContenido");
         contenedorAyuda.innerHTML="";
         var salida="";
-        salida +='<label id="texto">"Puntos Insuficientes"</label>';
-        salida +='<input type="button" id="btnOK" onclick="retornar()" value="Ok" ></input>';
+        salida +='<div class="Parrafo"><label id="texto">"Puntos Insuficientes"</label></div>';
+        salida +='<div class=BtnAlerta"><input type="button" id="btnOK" onclick="retornar()" value="Ok" ></input></div>';
         contenedorAyuda.innerHTML=salida;
     }
 }
@@ -477,10 +478,9 @@ function modificarPuntaje(id){
 
 function crearFinal(){
 
-    contenedor=document.getElementById("imgFinal");
-    var estilos ="style= 'width:200px; height:200px;'"
+    contenedor=document.getElementById("ContenedorFinal");
     var salida="";
-    salida = '<img  id ="imgNivel" src="'+imagenes[numeroComprobar]+'" '+estilos+' ></img>';
+    salida = '<img  id ="imgFinal" src="'+imagenes[numeroComprobar]+'" ></img>';
     contenedor.innerHTML=salida;
 
     contenedorDato=document.getElementById("datoCurioso");
@@ -498,10 +498,9 @@ function crearFinal(){
     salidaTicket +='<div id="numTicket2" class="NumTicket">'+localStorage.getItem('puntos')+'</div>';
     contenedorTicket.innerHTML=salidaTicket;
 
-    var contenedor=document.getElementById("imgFinal");
-    var estilos ="style= 'width:200px; height:200px;'"
+    var contenedor=document.getElementById("ContenedorFinal");
     var salida="";
-    salida = '<img  id ="imgNivel" src="'+imagenes[numeroComprobar]+'" '+estilos+' ></img>';
+    salida = '<img  id ="imgFinal" src="'+imagenes[numeroComprobar]+'"></img>';
     contenedor.innerHTML=salida;
 
     var contenedorDato=document.getElementById("datoCurioso");
