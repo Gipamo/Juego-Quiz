@@ -117,13 +117,13 @@ DatosCuriosos[4] = "Sulley tiene 2,320,413 pelos en su cuerpo. Esto fue un reto 
 DatosCuriosos[5] = "Para que se viera más realista, se cocinaron y fotografiaron todos los platos que aparecen en la cinta. Unos 270.";
 DatosCuriosos[6] = "En la película “Star Wars” aparece WALL-E entre los robots que han secuestrado R2-D2 y C3P-O, el cual sale a verlos cuando éstos llegan.";
 DatosCuriosos[7] = "Aunque en la pantalla parecía enorme, el King Kong de la primera película en realidad solo levantaba 45 centímetros del suelo.";
-DatosCuriosos[8] = 
-DatosCuriosos[9]
-DatosCuriosos[10]
-DatosCuriosos[11]
-DatosCuriosos[12]
-DatosCuriosos[13]
-DatosCuriosos[14]
+DatosCuriosos[8] = "El Oxford English Dictionary define supercalifragilisticexpialidocious como: “extraordinariamente bueno; maravilloso”";
+DatosCuriosos[9] = "La tasa de niños que se apuntaron a campamentos de verano cayó un 69%, tras el estreno del primer film.";
+DatosCuriosos[10] = "A pesar de ser una película de ciencia-ficción, la cinta solo tiene 32 escenas con efectos especiales.";
+DatosCuriosos[11] = "El logotipo de Los cazafantasmas es considerado uno de los veinte logos más reconocibles del mundo junto al de Coca Cola o Superman. Está inspirado en el fantasma Casper.";
+DatosCuriosos[12] = "El director utilizó solomillos y una variedad de melones para imitar el sonido del apuñalamiento de un cuerpo humano.";
+DatosCuriosos[13] = "La palabra jod*** (en inglés) se usa 265 veces en la cinta.";
+DatosCuriosos[14] = "Kim Cattrall rechazó en dos ocasiones interpretar a Samantha. La actriz ha declarado que en un inicio, pensó que el papel era de mamá de alguna de las chicas";
 DatosCuriosos[15]
 DatosCuriosos[16]
 DatosCuriosos[17]
@@ -383,9 +383,10 @@ function pedirAyuda(){
     if(ayuda==false){
         var contenedorAyuda=document.getElementById("ayudaContenido");
         var salida ="";
-        salida+='<label id="texto">¿Esta seguro que quiere pedir una ayuda por 15 puntos?</label>';
-        salida+='<input type="button" id="btnSI" onclick="modificarPuntaje(1)" value="Si" >';
-        salida+='<input type="button" id="btnNO" onclick="retornar()"value="No" >';
+
+        salida+='<div class="Parrafo"><label id="texto">¿Esta seguro que quiere pedir una ayuda por 15 puntos?</label></div>';
+        salida+='<div class="BtnAlerta"><input type="button" id="btnSI" onclick="modificarPuntaje(1)" value="Si" >';
+        salida+='<input type="button" id="btnNO" onclick="retornar()"value="No" ></div>';
         contenedorAyuda.innerHTML=salida;
         ventanaAyuda.classList.remove("oculto");
         for(var i=1;i < componentes.length;i++){
