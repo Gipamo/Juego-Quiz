@@ -15,6 +15,7 @@ var letrasDevolver=[]; //array con las posicion de las letras seleccionadas
 var salidaCuadrados=[]; //  Array con los cuadros de las letras seleccionadas
 var pruebas=[]; //Array con los elementos para validar el nivel correcto
 var componentes=[]; //array para las ayudas
+var DatosCuriosos = []; //Array para los datos curiosos
 
 window.onload = function(){
     inicializarReferencias();
@@ -106,6 +107,42 @@ nombre[27]="BRILLANTINA";
 nombre[28]="DUMBO";
 nombre[29]="ELREYLEON";
 nombre[30]="HARRYPOTTER";
+
+//Declaracion de datos
+
+DatosCuriosos[1] = "Robin Williams, quien le dio la voz al Genio, grabó 20 versiones diferentes de cada diálogo en un total de 16 horas.";
+DatosCuriosos[2] = "El nombre original de la película era You Are A Toy, lo que viene siendo “Tú eres un juguete”.";
+DatosCuriosos[3] = "Solo se utilizó uno de los robots de dinosaurios en el rodaje al aire libre.";
+DatosCuriosos[4] = "Sulley tiene 2,320,413 pelos en su cuerpo. Esto fue un reto para Pixar, pues fue el primer personaje que tuvo cada cabello animado.";
+DatosCuriosos[5] = "Para que se viera más realista, se cocinaron y fotografiaron todos los platos que aparecen en la cinta. Unos 270.";
+DatosCuriosos[6] = "En la película “Star Wars” aparece WALL-E entre los robots que han secuestrado R2-D2 y C3P-O, el cual sale a verlos cuando éstos llegan.";
+DatosCuriosos[7] = "Aunque en la pantalla parecía enorme, el King Kong de la primera película en realidad solo levantaba 45 centímetros del suelo.";
+DatosCuriosos[8] = 
+DatosCuriosos[9]
+DatosCuriosos[10]
+DatosCuriosos[11]
+DatosCuriosos[12]
+DatosCuriosos[13]
+DatosCuriosos[14]
+DatosCuriosos[15]
+DatosCuriosos[16]
+DatosCuriosos[17]
+DatosCuriosos[18]
+DatosCuriosos[19]
+DatosCuriosos[20]
+DatosCuriosos[21]
+DatosCuriosos[22]
+DatosCuriosos[23] = "Shrek es la primera película de animación digital protagonizada por humanos.";
+DatosCuriosos[24]
+DatosCuriosos[25]
+DatosCuriosos[26]
+DatosCuriosos[27]
+DatosCuriosos[28]
+DatosCuriosos[29]
+DatosCuriosos[30]
+
+
+
 
 
   //Seleccion de tipo de juego
@@ -259,7 +296,6 @@ function comprobarCorrecto(){
 
         cambiarSeccion(6);
         modificarPuntaje(0);
-        crearFinal();
         ayuda=false;
         textoComprobar="";
         arrayCuadros=[]; // Array con las letras desordenadas
@@ -364,7 +400,7 @@ function pedirAyuda(){
         ventanaAyuda.classList.remove("oculto");
         for(var i=1;i < componentes.length;i++){
             componentes[i].classList.add("oculto");
-         }
+        }
     }
 
 }
@@ -403,7 +439,7 @@ function retornar(){
     ventanaAyuda.classList.add("oculto");
     for(var i=1;i < componentes.length;i++){
         componentes[i].classList.remove("oculto");
-     }
+    }
 
 }
 
@@ -440,12 +476,4 @@ function modificarPuntaje(id){
         }
 
     }
-}
-function crearFinal(){
-
-    contenedor=document.getElementById("imgFinal");
-    var estilos ="style= 'width:200px; height:200px;'"
-    salida = '<img  id ="imgNivel" src="'+imagenes[numeroComprobar]+'" '+estilos+' ></img>';
-    contenedor.innerHTML=salida;
-
 }
