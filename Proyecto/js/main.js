@@ -124,22 +124,22 @@ DatosCuriosos[11] = "El logotipo de Los cazafantasmas es considerado uno de los 
 DatosCuriosos[12] = "El director utilizó solomillos y una variedad de melones para imitar el sonido del apuñalamiento de un cuerpo humano.";
 DatosCuriosos[13] = "La palabra jod*** (en inglés) se usa 265 veces en la cinta.";
 DatosCuriosos[14] = "Kim Cattrall rechazó en dos ocasiones interpretar a Samantha. La actriz ha declarado que en un inicio, pensó que el papel era de mamá de alguna de las chicas";
-DatosCuriosos[15]
-DatosCuriosos[16]
-DatosCuriosos[17]
-DatosCuriosos[18]
-DatosCuriosos[19]
-DatosCuriosos[20]
-DatosCuriosos[21]
-DatosCuriosos[22]
+DatosCuriosos[15] = "Scorsese leyó el guión en 1972, pero tuvo que esperar dos años hasta que Columbia dio el visto bueno a la película, protagonizada por De Niro, que había ganado el Oscar por la segunda entrega de El Padrino.";
+DatosCuriosos[16] = "El nombre de Gotham City proviene del anuncio de una joyería llamada Gotham Jewlers encontrado en la guía telefónica de Nueva York. ";
+DatosCuriosos[17] = "Capitán América fue presentado al mundo en 1941 en su propio cómic como un símbolo y ejemplo del orgullo estadounidense utilizado para motivar al público en una época de guerra.";
+DatosCuriosos[18] = "Deadpool es el único personaje capaz de romper la pared invisible imaginaria entre el cómic o la pantalla y la realidad.";
+DatosCuriosos[19] = "Una de las extravagancias más grandes de Tony Stark en los cómics fue la de adquirir del Gobierno de EEUU la propiedad sobre la famosa Área 51.";
+DatosCuriosos[20] = "Los padres de Peter, antes de morir, fueron Agentes de Shield. Incluso salvaron la vida a Logan (Wolverine).";
+DatosCuriosos[21] = "En Inglaterra fue prohibida en un principio a menores de 16 años porque la horrible bruja intentaba matar a Blancanieves.";
+DatosCuriosos[22] = "Butkus, su mascota en la película, era su perro en la vida real.";
 DatosCuriosos[23] = "Shrek es la primera película de animación digital protagonizada por humanos.";
-DatosCuriosos[24]
-DatosCuriosos[25]
-DatosCuriosos[26]
-DatosCuriosos[27]
-DatosCuriosos[28]
-DatosCuriosos[29]
-DatosCuriosos[30]
+DatosCuriosos[24] = "Existe una casa-museo dedicada a la vida del famoso detective. El museo, ubicado en Baker Street, es el segundo lugar más visitado del Reino Unido.";
+DatosCuriosos[25] = "Ni Samantha, Charlotte o Miranda repitieron algún atuendo a lo largo de la serie. La única que lo hizo fue Carrie, quien utilizó el mismo abrigo de la primera temporada en el último episodio de la serie. ";
+DatosCuriosos[26] = "La paleta de colores es muy importante en el filme. De acuerdo a Bonetto, cada personaje debía tener su propia paleta. ";
+DatosCuriosos[27] = "La canción “You’re The One That I Want” fue grabada en tan sólo una tarde. Esta es llegando casi al final del musical y sin duda se convirtió en una de las escenas más clásicas";
+DatosCuriosos[28] = "El nombre del circo (visto en un cartel cuando el tren sale de la estación de invierno) es WDP Circus (Walt Disney Productions).";
+DatosCuriosos[29] = "Varios animadores de Disney viajaron a África para estudiar la vida de los leones. También trabajaron con estos felinos dentro del estudio de producción.";
+DatosCuriosos[30] = "Los dementores representan la depresión de la autora J.K. Rowling.";
 
   //Seleccion de tipo de juego
 function tipoJuego(tipo){
