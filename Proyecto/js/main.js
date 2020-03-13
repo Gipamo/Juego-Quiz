@@ -141,10 +141,6 @@ DatosCuriosos[28]
 DatosCuriosos[29]
 DatosCuriosos[30]
 
-
-
-
-
   //Seleccion de tipo de juego
 function tipoJuego(tipo){
     if(tipo==1){
