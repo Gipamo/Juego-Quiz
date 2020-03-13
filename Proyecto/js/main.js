@@ -298,7 +298,6 @@ function comprobarCorrecto(){
         arrayCuadros=[]; // Array con las letras desordenadas
         arrayLetras=[]; //Array con los cuadradrados de las letras del teclado
         letrasDevolver=[]; //array con las posicion de las letras seleccionadas
-        salidaCuadrados=[]; //  Array con los cuadros de las letras seleccionadas
         pruebas=[]; //Array con los elementos para validar el nivel correcto
     }
 
@@ -488,4 +487,29 @@ function crearFinal(){
     salidaDato='<div id="datoCurioso" >'+DatosCuriosos[numeroComprobar]+'</div> ';
     contenedorDato.innerHTML=salidaDato;
 
+}
+function crearFinal(){
+
+    var contenedor=document.getElementById("imgFinal");
+    var estilos ="style= 'width:200px; height:200px;'"
+    var salida="";
+    salida = '<img  id ="imgNivel" src="'+imagenes[numeroComprobar]+'" '+estilos+' ></img>';
+    contenedor.innerHTML=salida;
+
+    var contenedorDato=document.getElementById("datoCurioso");
+    var salidaDato="";
+    salidaDato='<div id="datoCurioso" class="Dato">'+DatosCuriosos[numeroComprobar]+'</div> ';
+    contenedorDato.innerHTML=salidaDato;
+
+    var contenedorFinal=document.getElementById("nomPeliculaFinal");
+    var salidaFinal="";
+    for(var i=0;i < salidaCuadrados.length;i++){
+
+        salidaFinal+=salidaCuadrados[i];
+
+    }
+    contenedorFinal.innerHTML=salidaFinal;
+}
+function quitarNombre(){
+    salidaCuadrados=[];
 }
