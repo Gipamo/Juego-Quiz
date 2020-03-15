@@ -7,6 +7,8 @@ var gid;
 var textoComprobar="";
 var numeroComprobar;
 var tiempo_splash = 2500;
+var contenedorNomPelicula="";
+var contenedorLetras="";
 var ayuda=false;  //define si nse pidio ayuda o no
 var letraAyuda="";
 var arrayCuadros=[]; // Array con las letras desordenadas
@@ -39,6 +41,8 @@ function inicializarReferencias(){
     secciones[8] = document.getElementById("creditos");
     secciones[9] = document.getElementById("splash");
     secciones[10] = document.getElementById("Ayuda");
+    contenedorNomPelicula=document.getElementById("nomPelicula");
+    contenedorLetras=document.getElementById("letras");
 
 
 }
@@ -217,7 +221,6 @@ function repartirPalabras(nivel){
     var palabra=nombre[nivel];
     var arrayPalabra=palabra.split("");
     arrayCuadros=shuffle(arrayPalabra);
-    var contenedor=document.getElementById("letras")
     var salida="";
     for(var i=0;i < arrayPalabra.length;i++){
         arrayLetras[i]='<div class="cuadradosLetras block" id="letra'+i+'" onclick="comprobarNivel('+i+')">'+arrayCuadros[i]+'</div>';
@@ -225,7 +228,7 @@ function repartirPalabras(nivel){
 
     }
 
-    contenedor.innerHTML=salida;
+    contenedorLetras.innerHTML=salida;
 
 
 
@@ -233,8 +236,7 @@ function repartirPalabras(nivel){
 
 //comprobar nivel
 function comprobarNivel(id){
-    var contenedor=document.getElementById("nomPelicula");
-    var elementoPush='<div class="cuadrados block" id="letravalidar'+id+'" >'+arrayCuadros[id]+'</div>';
+    var elementoPush='<div class="cuadrados block" id="letravalidar'+id+'" ondblclick="regresar()">'+arrayCuadros[id]+'</div>';
     salidaCuadrados.push(elementoPush);
     var salida="";
     for(var i=0;i < salidaCuadrados.length;i++){
@@ -242,12 +244,11 @@ function comprobarNivel(id){
         salida+=salidaCuadrados[i];
 
     }
-    contenedor.innerHTML=salida;
+    contenedorNomPelicula.innerHTML=salida;
     var agregarProbar=document.getElementById("letravalidar"+id);
     pruebas.push(agregarProbar.innerHTML);
     letrasDevolver.push(id)
     arrayLetras[id]='<div class="cuadradosLetras oculto" id="letra'+id+'" onclick="comprobarNivel('+id+')">'+arrayCuadros[id]+'</div>';
-    var contenedorLetras=document.getElementById("letras");
     var salidaLetras="";
     for(var i=0;i < arrayLetras.length;i++){
         salidaLetras+=arrayLetras[i];
@@ -265,15 +266,13 @@ function regresar(){
     pruebas.pop();
     var id=letrasDevolver.pop();
     arrayLetras[id]='<div class="cuadradosLetras block" id="letra'+id+'" onclick="comprobarNivel('+id+')">'+arrayCuadros[id]+'</div>';
-    var contenedor=document.getElementById("nomPelicula");
     var salida="";
     for(var i=0;i < salidaCuadrados.length;i++){
 
         salida+=salidaCuadrados[i];
 
     }
-    contenedor.innerHTML=salida;
-    var contenedorLetras=document.getElementById("letras");
+    contenedorNomPelicula.innerHTML=salida;
     var salidaLetras="";
     for(var i=0;i < arrayLetras.length;i++){
         salidaLetras+=arrayLetras[i];
@@ -375,12 +374,6 @@ function botonVolver(id){
 
 function pedirAyuda(){
     var ventanaAyuda=document.getElementById("ventana");
-    componentes[1]=document.getElementById("btnVolver");
-    componentes[2]=document.getElementById("imgNivel");
-    componentes[3]=document.getElementById("nomPelicula");
-    componentes[4]=document.getElementById("letras");
-    componentes[5]=document.getElementById("btnDelete");
-    componentes[6]=document.getElementById("abrirAyuda");
     if(ayuda==false){
         var contenedorAyuda=document.getElementById("ayudaContenido");
         var salida ="";
@@ -427,13 +420,7 @@ function ayudar(id){
 }
 function retornar(){
     var ventanaAyuda=document.getElementById("ventana");
-    var componentes=[]
-    componentes[1]=document.getElementById("btnVolver");
-    componentes[2]=document.getElementById("imgNivel");
-    componentes[3]=document.getElementById("nomPelicula");
-    componentes[4]=document.getElementById("letras");
-    componentes[5]=document.getElementById("btnDelete");
-    componentes[6]=document.getElementById("abrirAyuda");
+
     ventanaAyuda.classList.add("oculto");
     for(var i=1;i < componentes.length;i++){
         componentes[i].classList.remove("oculto");
