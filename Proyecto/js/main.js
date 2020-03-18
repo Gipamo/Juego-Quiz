@@ -6,9 +6,13 @@ var gdificultad;
 var gid;
 var textoComprobar="";
 var numeroComprobar;
+var contenedor="";
 var tiempo_splash = 2500;
 var contenedorNomPelicula="";
 var contenedorLetras="";
+var contenedorDato="";
+var contenedorTicket="";
+var contenedorFinal="";
 var ayuda=false;  //define si nse pidio ayuda o no
 var letraAyuda="";
 var arrayCuadros=[]; // Array con las letras desordenadas
@@ -42,6 +46,9 @@ function inicializarReferencias(){
     secciones[9] = document.getElementById("splash");
     contenedorNomPelicula=document.getElementById("nomPelicula");
     contenedorLetras=document.getElementById("letras");
+    contenedorDato=document.getElementById("datoCurioso");
+    contenedorTicket=document.getElementById("cntTicket");
+    contenedorFinal=document.getElementById("contenedorFinal");
     componentes[1]= contenedorLetras;
     componentes[2]=document.getElementById("pistaImg");
     componentes[3]=document.getElementById("abrirAyuda");
@@ -203,8 +210,6 @@ function cambioDificultad(dificultad){
 function cambioNivel(id){
     nivel=gtipo+gdificultad+id;
     var nivelActual=imagenes[nivel]; 
-
-    var contenedorTicket=document.getElementById("cntTicket");
     var salidaTicket="";
 
     salidaTicket += '<img class="Ticket" src="img/Ticket.png" alt=""></img>'
@@ -432,10 +437,9 @@ function retornar(){
 }
 
 function actualizarPuntaje(){
-    var contenedorTicket=document.getElementById("cntTicket");
     var salidaTicket="";
-    salidaTicket += '<img class="Ticket" src="img/Ticket.png" alt=""></img>'
-    salidaTicket +='<div id="numTicket" class="NumTicket">'+localStorage.getItem('puntos')+'</div>';
+    salidaTicket += '<img class="ticket" src="img/Ticket.png" alt=""></img>'
+    salidaTicket +='<div id="numTicket" class="numTicket">'+localStorage.getItem('puntos')+'</div>';
     contenedorTicket.innerHTML=salidaTicket;
 }
 
@@ -466,46 +470,31 @@ function modificarPuntaje(id){
     }
 }
 
+
 function crearFinal(){
-
-    contenedor=document.getElementById("ContenedorFinal");
-    var salida="";
-    salida = '<img  id ="imgFinal" src="'+imagenes[numeroComprobar]+'" ></img>';
-    contenedor.innerHTML=salida;
-
-    contenedorDato=document.getElementById("datoCurioso");
-    var salidaDato="";
-    salidaDato='<div id="datoCurioso" >'+DatosCuriosos[numeroComprobar]+'</div> ';
-    contenedorDato.innerHTML=salidaDato;
-
-}
-function crearFinal(){
-
-    var contenedorTicket=document.getElementById("cntTicket2");
-    var salidaTicket="";
-
-    salidaTicket += '<img class="Ticket" src="img/Ticket.png" alt=""></img>'
-    salidaTicket +='<div id="numTicket2" class="NumTicket">'+localStorage.getItem('puntos')+'</div>';
-    contenedorTicket.innerHTML=salidaTicket;
-
-    var contenedor=document.getElementById("ContenedorFinal");
-    var salida="";
-    salida = '<img  id ="imgFinal" src="'+imagenes[numeroComprobar]+'"></img>';
-    contenedor.innerHTML=salida;
-
-    var contenedorDato=document.getElementById("datoCurioso");
-    var salidaDato="";
-    salidaDato='<div id="datoCurioso" class="Dato">'+DatosCuriosos[numeroComprobar]+'</div> ';
-    contenedorDato.innerHTML=salidaDato;
-
-    var contenedorFinal=document.getElementById("nomPeliculaFinal");
     var salidaFinal="";
+    var salidaTicket2="";
+    salidaFinal += '<div id="cntTicket2" class="contenedorTicket2"></div>'
+    salidaFinal += '<p>¡¡ Correcto !!</p>';
+    salidaFinal += '<img id ="imgFinal" src="'+imagenes[numeroComprobar]+'"></img>';
+    salidaFinal += '<div id="nomPeliculaFinal"></div>';
+    salidaFinal+='<div class="titulo">Sabias que...</div>';
+    salidaFinal+='<div id="datoCurioso" class="dato">'+DatosCuriosos[numeroComprobar]+'</div>';
+    contenedorFinal.innerHTML=salidaFinal;
+
+    var contenedorTeclaFinal=document.getElementById("nomPeliculaFinal");
+    var contenedorTicket2=document.getElementById("cntTicket2");
+    var salidaTeclaFinal="";
     for(var i=0;i < salidaCuadrados.length;i++){
 
-        salidaFinal+=salidaCuadrados[i];
+        salidaTeclaFinal+=salidaCuadrados[i];
 
     }
-    contenedorFinal.innerHTML=salidaFinal;
+    contenedorTeclaFinal.innerHTML=salidaTeclaFinal;
+    salidaTicket2 += '<img class="ticket" src="img/Ticket.png" alt=""></img>'
+    salidaTicket2 +='<div id="numTicket" class="numTicket">'+localStorage.getItem('puntos')+'</div>';
+    contenedorTicket2.innerHTML=salidaTicket2;
+
 }
 function quitarNombre(){
     salidaCuadrados=[];
