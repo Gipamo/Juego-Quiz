@@ -42,6 +42,11 @@ function inicializarReferencias(){
     secciones[9] = document.getElementById("splash");
     contenedorNomPelicula=document.getElementById("nomPelicula");
     contenedorLetras=document.getElementById("letras");
+    componentes[1]= contenedorLetras;
+    componentes[2]=document.getElementById("pistaImg");
+    componentes[3]=document.getElementById("abrirAyuda");
+    componentes[4]=document.getElementById("cntBotonVolver");
+
 
 
 }
