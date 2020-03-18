@@ -27,17 +27,13 @@ h1{
     color: white;
     margin: auto;
 }
-.H1Splash{
-    background-color: #35b2a0;
-    border-radius: 10px;
-    padding: 5px 10px;
-}
+
 h2{
     font-size: 35px;
     color: white;
     margin-bottom: 50px;
 }
-.Icon{
+.icon{
     width: 35px;
     height: 35px;
     margin: 10px;
@@ -53,10 +49,10 @@ h2{
     font-size: 24px;
     color: white;
 }
-.ContenedorSplash{
+.contenedorSplash{
     display: flex;
 }
-.contenedor,.ContenedorSplash{
+.contenedor,.contenedorSplash{
     margin: auto;
     font-size: 30px;
     padding: 5px 5px;
@@ -65,7 +61,7 @@ h2{
     height: 37px;
     width: 80px;
 }
-.Cuadro{
+.cuadro{
     height: 35px;
     width: 38px;
     background-color: #35b2a0;
@@ -97,7 +93,7 @@ h2{
     margin-top: 50px;
 }
 .btn_Instrucciones{
-    background-color: #f5d159;
+    background-color: #D570FF;
 }
 .btn_Créditos{
     background-color: #e96550;
@@ -114,7 +110,7 @@ h2{
     margin: auto;
 }
 .btnSeleccion{
-    height: 400px;
+    height: 420px;
 }
 
 
@@ -136,7 +132,8 @@ h2{
     background: #394b8b;
 }
 #dificultadActual{
-    font-size: 35px;
+    font-size: 28px;
+    height: 46px;
     color: white;
     margin-bottom: 20px;
 }
@@ -154,29 +151,21 @@ h2{
     height: 150px;
     border: solid 2px white;
 }
-.Ticket{
+.ticket{
     width: 90px;
     height: 55px;
 }
-.BtnAtras{
-    border-top: 10px;
-}
-.ContenedorTicket, .ContenedorTicket2{
+
+.contenedorTicket, .contenedorTicket2{
     position: relative;
     display: inline-block;
     text-align: center;
 }
-.ContenedorTicket{
+.contenedorTicket{
     margin-bottom: 60px;
 }
-.ContenedorTicket2{
+.contenedorTicket2{
     margin-bottom: 20px;
-}
-.NumTicket{
-    position: absolute;
-    top: 62%;
-    left: 50%;
-    transform: translate(-50%, -62%);
 }
 #letras{
     margin-top: 10px;
@@ -230,19 +219,15 @@ h2{
     border: solid 1px white;
     border-radius: 10px;
 }
-/*---------------- Ayuda -------------*/
-.Ayuda{
-    background-color: #394b8b;
-}
 /*---------------- Final --------------*/
 .final{
     background: #6dbe45;
 }
-#ContenedorFinal{
+#contenedorFinal{
     margin-bottom: 5px;
 }
 
-.Like{
+.like{
     width: 60px;
     height: 60px;
     margin: 10px;
@@ -250,17 +235,24 @@ h2{
     cursor: pointer;
 }
 
+.numTicket{
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -62%);
+}
+
 p{
     font-size: 35px;
     color: white;
     margin-bottom: 20px;
 }
-.Titulo{
+.titulo{
     color: white;
     font-size: 20px;
     margin-right: 60%;
 }
-.Dato{
+.dato{
     border: 2px solid white;
     border-radius: 10px;
     color: white;
@@ -271,46 +263,46 @@ p{
 
 /*---------------- Instrucciones --------------*/
 .instrucciones{
-    background: #f3ba08;
+    background: #8c004b;
 }
-.CuadroInstru{
+.cuadroInstru{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 35px;
     width: 38px;
-    background-color: #F5D159;
+    background-color: rgba(245, 245, 245, 0.50);
     margin: 1px;
     border-radius: 10px;
     border: 1px solid white;
 }
-.SpanInstru{
+.spanInstru{
     display: flex;
     align-items: center;
     justify-items: center;
     margin: 30px 10px;
 }
-.Instru{
+.instru{
     font-size: 18px;
     width: 250px;
     margin: 0px 10px;
-    color: black;
+    color: white;
 }
 
 /*---------------- Creditos --------------*/
 .creditos{
     background: #d53e2b;
 }
-.SpanCreditos{
+.spanCreditos{
     font-size: 18px;
     margin: 5px;
     padding: 0px 5px;
 }
-.Nosotros{
+.nosotros{
     margin-top: 10px;
     margin-bottom: 0;
 }
-.Imagen{
+.imagen{
     padding: 10px;
     display: flex;
     align-items: center;
