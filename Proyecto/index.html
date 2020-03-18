@@ -13,12 +13,12 @@
 
 <body>
     <section id="splash" class="splash flex animated heartBeat infinite">
-        <div class="ContenedorSplash">
+        <div class="contenedorSplash">
             <div class="peliSplash">
-                <div class="Cuadro"><span id="p">P</span></div>
-                <div class="Cuadro"><span id="e">E</span></div>
-                <div class="Cuadro"><span id="l">L</span></div>
-                <div class="Cuadro"><span id="i">I</span></div>
+                <div class="cuadro"><span id="p">P</span></div>
+                <div class="cuadro"><span id="e">E</span></div>
+                <div class="cuadro"><span id="l">L</span></div>
+                <div class="cuadro"><span id="i">I</span></div>
                 
             </div>
             <div class="quizSplash">QUIZ</div>
@@ -38,7 +38,7 @@
         </div>
     </section>
     <section id="categoria" class="categoria oculto">
-        <img  id="btnVolver" class="Icon" src="img/Trazado 12.png" alt="" onclick="botonVolver(1)">
+        <img  id="btnVolver" class="icon" src="img/Trazado 12.png" alt="" onclick="botonVolver(1)">
         <div class="contenedor">
             <h2>¿Con que quieres jugar?</h2>
             <div id="botones">
@@ -48,21 +48,20 @@
         </div>
     </section>
     <section id="nivel" class="nivel oculto">
-        <img class="Icon" id="btnVolver" src="img/Trazado 12.png" alt="" onclick="botonVolver(2)">
+        <img class="icon" id="btnVolver" src="img/Trazado 12.png" alt="" onclick="botonVolver(2)">
         <div class="contenedor">
-            <h2>Dificultad</h2>
             <div id="botones">
                 <button class="button btn_Niveles" onclick="cambioDificultad(0);cambiarSeccion(4) " href="javascript:void()">Fácil</button>
                 <button class="button btn_Niveles" onclick="cambioDificultad(1);cambiarSeccion(4)" href="javascript:void()">Medio</button>
-                <button class="button btn_Niveles" onclick="cambioDificultad(2);cambiarSeccion(4)" href="javascript:void()">Dificil</button>
+                <button class="button btn_Niveles" onclick="cambioDificultad(2);cambiarSeccion(4)" href="javascript:void()">Difícil</button>
             </div>
         </div>
     </section>
     <section id="seleccion" class="seleccion oculto">
-        <img class="Icon" id="btnVolver" src="img/Trazado 12.png" alt="" onclick="botonVolver(3)">
+        <img class="icon" id="btnVolver" src="img/Trazado 12.png" alt="" onclick="botonVolver(3)">
         <div class="contenedor">
             <h2 id="dificultadActual"></h2>
-            <div id="botones" class="BtnSeleccion">
+            <div id="botones" class="btnSeleccion">
                 <button class="btn_Selec" id="lvl1" onclick="cambioNivel(1);cambiarSeccion(5)" href="javascript:void()">Nivel 1</button>
                 <button class="btn_Selec" id="lvl2" onclick="cambioNivel(2);cambiarSeccion(5)" href="javascript:void()">Nivel 2</button>
                 <button class="btn_Selec" id="lvl3" onclick="cambioNivel(3);cambiarSeccion(5)" href="javascript:void()">Nivel 3</button>
@@ -73,9 +72,9 @@
         </div>
     </section>
     <section id="juego" class="juego oculto">
-        <img class="Icon" id="btnVolver" src="img/images.png" alt="" onclick="botonVolver(4)">
+        <img class="icon" id="btnVolver" src="img/images.png" alt="" onclick="botonVolver(4)">
         <div class="contenedor">
-            <div id="cntTicket" class="ContenedorTicket">
+            <div id="cntTicket" class="contenedorTicket">
             </div>
             <div id="pistaImg"></div>
             <div id="nomPelicula">
@@ -87,84 +86,69 @@
                     
                 </div>
             </div>
-            <!--<Img src="img/Ayuda.png" id="abrirAyuda" onclick="cambiarSeccion(10)"></Img>-->
             <Img src="img/Ayuda.png" id="abrirAyuda" onclick="pedirAyuda()"></Img>
-        </div>
-        
-    </section>
-    <section id="Ayuda" class="Ayuda oculto">
-        <img class="Icon" id="btnVolver" src="img/images.png" alt="" onclick="botonVolver(5)">
-        <div class="contenedor">
-            <h2>Ayuda</h2>
-            <p>Esta ayuda te dira cual es la primera letra</p>
-            <div id="pistaImg"><img src="img/Ayuda.png" alt=""></div>
-            <div>
-                <div>Costo:</div>
-                <div id="cntTicket" class="ContenedorTicket">
-                </div>
-            </div>
         </div>
         
     </section>
     <section id="final" class="final oculto">
         
-        <img class="Like" src="img/like.png" onclick="cambiarSeccion(4);quitarNombre()" alt="">
+        <img class="like" src="img/like.png" onclick="cambiarSeccion(4);quitarNombre()" alt="">
         <div class="contenedor">
-            <div id="cntTicket2" class="ContenedorTicket2">
+            <div id="cntTicket2" class="contenedorTicket2">
             </div>
             <p>¡¡ Correcto !!</p>
-            <div id="ContenedorFinal">
+            <div id="contenedorFinal">
             </div>
             <div id="nomPeliculaFinal">
             </div>
-            <div class="Titulo">Sabias que...</div>
+            <div class="titulo">Sabias que...</div>
             <div id="datoCurioso" >Aqui dato curioso</div> 
         </div>
         
     </section>
     <section id="instrucciones" class="instrucciones oculto">
-        <img class="Icon" id="btnVolver" src="img/Trazado 12.png" alt="" onclick="botonVolver(1)">
+        <img class="icon" id="btnVolver" src="img/Trazado 12.png" alt="" onclick="botonVolver(1)">
         
         <div class="contenedor">
             <h2>Instrucciones</h2>
-            <div class="SpanInstru">
-                <span class="CuadroInstru">1</span>
-                <span class="Instru">Adivina el nombre de la película o del Personaje.</span>
+            <div class="spanInstru">
+                <span class="cuadroInstru">1</span>
+                <span class="instru">Adivina el nombre de la película o del Personaje.</span>
             </div>
-            <div class="SpanInstru">
-                <span class="CuadroInstru">2</span>
-                <span class="Instru">Selecciona las letras en orden para formar el nombre de la película.</span>
+            <div class="spanInstru">
+                <span class="cuadroInstru">2</span>
+                <span class="instru">Selecciona las letras en orden para formar el nombre de la película.</span>
             </div>
-            <div class="SpanInstru">
-                <span class="CuadroInstru">3</span>
-                <span class="Instru">Suma puntos que pueden ser usados en las Ayudas, pero te cuidado, Cuando uses una ayuda, se perdera si cambia de nivel.</span>
+            <div class="spanInstru">
+                <span class="cuadroInstru">3</span>
+                <span class="instru">Suma puntos que pueden ser usados en las Ayudas, pero te cuidado, Cuando uses una ayuda, se perdera si cambia de nivel.</span>
             </div>
 
         </div>
     </section>
     <section id="creditos" class="creditos oculto">
-        <img class="Icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(1)">
+        <img class="icon" src="img/Trazado 12.png" alt="" onclick="cambiarSeccion(1)">
         <div class="contenedor">
-            <div class="Imagen">
-                <img src="img/mariajose.png" alt="" class="Nosotros">
+            <div class="imagen">
+                <img src="img/mariajose.png" alt="" class="nosotros">
                 <div>
-                    <h1 class="SpanCreditos">Maria Jose Lopez</h1>
-                    <span class="SpanCreditos"> Diseñadora Grafica</span>
+                    <h1 class="spanCreditos">Maria Jose Lopez</h1>
+                    <span class="spanCreditos"> Diseñadora Grafica</span>
                 </div>
                 
             </div>
-            <div class="Imagen">
-                <img src="img/neider.png" alt="" class="Nosotros">
+            <div class="imagen">
+                <img src="img/neider.png" alt="" class="nosotros">
                 <div>
-                    <h1 class="SpanCreditos">Neider Carrillo Vera</h1>
-                    <span class="SpanCreditos"> Ing. en Sistemas</span>
+                    <h1 class="spanCreditos">Neider Carrillo Vera</h1>
+                    <span class="spanCreditos"> Ing. en Sistemas</span>
                 </div>
             </div>  
-            <div class="Imagen">
-                <img src="img/giam.png" alt="" class="Nosotros">
+            <div class="imagen">
+                <img src="img/giam.png" alt="" class="nosotros">
                 <div>
-                    <h1 class="SpanCreditos">Gian Paul Moreno</h1>
-                    <span class="SpanCreditos"> Ing. en Sistemas</span>
+                    <h1 class="spanCreditos">Gian Paul Moreno</h1>
+                    <span class="spanCreditos"> Ing. en Sistemas</span>
                 </div>
                 
             </div>
