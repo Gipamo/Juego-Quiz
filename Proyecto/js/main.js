@@ -40,7 +40,6 @@ function inicializarReferencias(){
     secciones[7] = document.getElementById("instrucciones");
     secciones[8] = document.getElementById("creditos");
     secciones[9] = document.getElementById("splash");
-    secciones[10] = document.getElementById("Ayuda");
     contenedorNomPelicula=document.getElementById("nomPelicula");
     contenedorLetras=document.getElementById("letras");
 
@@ -164,7 +163,7 @@ function cambioDificultad(dificultad){
     var texto="";
     if(dificultad==0){
         gdificultad=0;
-        texto='<h2 id="dificultadActual">Facil</h2>';
+        texto='<h2 id="dificultadActual">Fácil</h2>';
 
     }
     else if (dificultad==1){
@@ -173,7 +172,7 @@ function cambioDificultad(dificultad){
     }
     else{
         gdificultad=10;
-        texto='<h2 id="dificultadActual">Dificil</h2>';
+        texto='<h2 id="dificultadActual">Difícil</h2>';
     }
 
     lvl[1]=document.getElementById("lvl1")
@@ -204,7 +203,7 @@ function cambioNivel(id){
     var salidaTicket="";
 
     salidaTicket += '<img class="Ticket" src="img/Ticket.png" alt=""></img>'
-    salidaTicket +='<div id="numTicket" class="NumTicket">'+localStorage.getItem('puntos')+'</div>';
+    salidaTicket +='<div id="numTicket" class="numTicket">'+localStorage.getItem('puntos')+'</div>';
     contenedorTicket.innerHTML=salidaTicket;
 
     contenedor=document.getElementById("pistaImg");
@@ -367,8 +366,7 @@ function cambiarSeccion(id_seccion){
 //boton volver
 function botonVolver(id){
     ayuda=false;
-    cambiarSeccion(id);
-    
+    cambiarSeccion(id);    
 
 }
 
@@ -378,8 +376,8 @@ function pedirAyuda(){
         var contenedorAyuda=document.getElementById("ayudaContenido");
         var salida ="";
 
-        salida+='<div class="Parrafo"><label id="texto">¿Esta seguro que quiere pedir una ayuda por 15 puntos?</label></div>';
-        salida+='<div class="BtnAlerta"><input type="button" id="btnSI" onclick="modificarPuntaje(1)" value="Si" >';
+        salida+='<div class="parrafo"><label id="texto">¿Esta seguro que quiere pedir una ayuda por 15 puntos?</label></div>';
+        salida+='<div class="btnAlerta"><input type="button" id="btnSI" onclick="modificarPuntaje(1)" value="Si" >';
         salida+='<input type="button" id="btnNO" onclick="retornar()"value="No" ></div>';
         contenedorAyuda.innerHTML=salida;
         ventanaAyuda.classList.remove("oculto");
